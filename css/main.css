@@ -1,0 +1,38 @@
+/**BODY**/
+body {
+ background-color:white;
+ margin: 0;
+
+}
+
+
+/** HERO **/
+.hero {
+ min-height: 20vh;
+ height: 50vh;
+ display: flex;
+ display: -webkit- flex;
+ display: -ms-flex;
+ flex-direction:column;
+ -webkit- flex-direction:column;
+-ms- flex-direction:column;
+ justify-content: center;
+-webkit- justify-content: center;
+ -ms-justify-content: center;
+ align-items: center;
+-webkit- align-items: center;
+-ms- align-items: center;
+ background-color:black;
+ padding:20px;
+
+}
+.hero h1,h2,a,p{
+ color:white;
+}
+.hero a {
+  text-decoration: none;
+  color:black;
+  border:white 5px solid;
+  background-color:white;
+  border-radius: 10%;
+}
