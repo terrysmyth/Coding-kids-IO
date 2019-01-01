@@ -1,10 +1,15 @@
+/*GENERAL */
+body {
+	background-color:red; 
+
+}
+
 /**BODY**/
 body {
  background-color:white;
  margin: 0;
 
 }
-
 
 /** HERO **/
 .hero {
@@ -33,10 +38,10 @@ body {
 	width: 90vh;
 }
 
-
 .hero h1,h2,a,p{
  color:white;
 }
+
 .hero a {
   text-decoration: none;
   color:black;
@@ -44,3 +49,4 @@ body {
   background-color:white;
   border-radius: 10%;
 }
+
