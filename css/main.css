@@ -26,6 +26,14 @@ body {
  padding:20px;
 
 }
+
+.heroInner {
+	text-align: center;
+	max-width: 400px;
+	width: 90vh;
+}
+
+
 .hero h1,h2,a,p{
  color:white;
 }
