@@ -1,4 +1,19 @@
 /*GENERAL */
+/** FONTS
+	font-family: 'Nunito', sans-serif;
+	font-family: 'Righteous', cursive;
+**/
+
+/* GENERAL */
+*, p, label, a, input, li {
+	font-family: 'Nunito', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Righteous', cursive;
+}
+
+
 body {
 	background-color:red; 
 
@@ -38,7 +53,10 @@ body {
 	width: 90vh;
 }
 
-.hero h1,h2,a,p{
+.hero h1,
+.hero h2,
+.hero a,
+.hero p {
  color:white;
 }
 
@@ -50,3 +68,6 @@ body {
   border-radius: 10%;
 }
 
+.hero hr {
+	color:white;
+}
