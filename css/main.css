@@ -1,8 +1,40 @@
-/*GENERAL */
+/*COLORS 
+	Blue:#0B3C5D;
+	Light Blue:#328CC1;
+	Gold:#D9B310;
+	Ivory Black:#1D2731;
+*/
+/** FONTS
+	font-family: 'Nunito', sans-serif;
+	font-family: 'Righteous', cursive;
+**/
+
+/*GENERAL*/
+a:hover {
+    text-decoration: none;
+}
+
+*,
+p,
+label,
+a,
+input,
+li {
+    font-family: 'Nunito', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Righteous', cursive;
+}
+
+
 body {
-	background-color:red; 
- 	background-color:white;
- 	margin: 0;
+    margin: 0;
 
 }
 
@@ -45,10 +77,10 @@ nav .btnsearch:hover {
 
 
 nav.navbar {
-	background-color:rgba(255,255,255,0.1); 
-	border: none;
-	position: fixed;
-	width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    position: fixed;
+    width: 100%;
 
 }
 
@@ -84,43 +116,173 @@ nav .navbar-toggler:hover .line3 {
 
 /** HERO **/
 .hero {
- min-height: 20vh;
- height: 50vh;
- display: flex;
- display: -webkit- flex;
- display: -ms-flex;
- flex-direction:column;
- -webkit- flex-direction:column;
--ms- flex-direction:column;
- justify-content: center;
--webkit- justify-content: center;
- -ms-justify-content: center;
- align-items: center;
--webkit- align-items: center;
--ms- align-items: center;
- background-color:black;
- padding:20px;
+    background-image:url(../images/bck1.jpg);
+    background-size: cover;
+    background-position: bottom center;
+    min-height: 20vh;
+    height: 50vh;
+    display: flex;
+    display: -webkit- flex;
+    display: -ms-flex;
+    flex-direction: column;
+    -webkit- flex-direction: column;
+    -ms- flex-direction: column;
+    justify-content: center;
+    -webkit- justify-content: center;
+    -ms-justify-content: center;
+    align-items: center;
+    -webkit- align-items: center;
+    -ms- align-items: center;
+    background-color: black;
+    padding: 20px;
 }
 
 .heroInner {
-	text-align: center;
-	max-width: 400px;
-	width: 90vh;
+    text-align: center;
+    max-width: 400px;
+    width: 90vh;
 }
 
-.hero h1,h2,a,p{
- color:white;
+.hero h1,
+.hero h2,
+.hero a,
+.hero p {
+    color: white;
 }
 
 .hero a {
-  text-decoration: none;
-  color:black;
-  border:white 5px solid;
-  background-color:white;
-  border-radius: 10%;
+    text-decoration: none;
+    color: black;
+}
+
+.hero a:hover {
+    padding: 15px;
+}
+
+.heroInner hr {
+    background-color: white;
+}
+
+.heroInner h2 {
+    font-size: 20px;
+    margin-bottom: 50px;
 }
 
 
+/*FOOTER*/
+
+.footer {
+    background-color: #D9B310;
+    color: #fff;
+    padding: 50px 15px;
+    display: flex;
+    display: flex;
+    display: flex;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+}
+
+.footer p {
+    font-size: 18px;
+    color: #fff;
+}
+
+.footerInfo {
+    width: 50vw;
+    max-width: 600px;
+}
+
+.footerInfo a {
+    color: #328CC1;
+    padding: 10px 15px;
+    background-color: white;
+    transition-duration: 0.3s
+}
+
+.footerInfo a:hover {
+    color: #0B3C5D;
+    background-color: #328CC1;
+}
+
+.contactForm {
+    width: 50vw;
+    max-width: 450px;
+    padding: 0 20px;
+}
+
+.contactForm label {
+    display: block;
+    margin: 10px 0 0 0;
+}
+
+.contactForm input {
+    width: 300px;
+    border: none;
+    padding: 5px;
+    display: block;
+    margin: 0;
+}
+
+.contactForm textarea {
+    width: 300px;
+    max-width: 300px;
+    min-width: 300px;
+    height: 100px;
+    max-height: 100px;
+    min-height: 100px;
+    border: none;
+    margin: 0;
+}
+
+.contactForm input[type="submit"] {
+    background-color: #328CC1;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+    transition-duration: 0.5s;
+}
+
+.contactForm input[type="submit"]:hover {
+    background-color: #0B3C5D;
+    color: #D9B310;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: white;
+    padding: 10px;
+    transition-duration: 0.3s
+}
+
+/* GAMES*/
+
+.games {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.homeGame {
+    padding-top: 50px;
+    width: 30%;
+    margin: 5px;
+    min-width: 300px;
+}
+
+.gameImg {
+    height: 250px;
+}
+
+.gameInfo {
+    background-color: #f5f5f5f5;
+    height: 85px;
+    padding: 10px;
+}
+
+/*INFO*/
+.sideInfo {
+    padding: 30px;
+    background-color: #f5f5f5f5;
+}
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 990px) {
@@ -130,6 +292,4 @@ nav .navbar-toggler:hover .line3 {
   }
 
 }
-
-
 
