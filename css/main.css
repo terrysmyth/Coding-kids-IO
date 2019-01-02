@@ -38,13 +38,78 @@ body {
 
 }
 
+
+input:focus, input:hover, input:active {
+	outline: none !important;
+	box-shadow: none !important;
+	border-color: transparent !important;
+}
 /* NAV */
+nav .navbar-toggler-item {
+	background-color: #fff;
+	color: #fff;
+}
+
+nav .navbar-toggler:focus {
+	outline: none !important;
+}
+
+
+nav .btnsearch {
+	background-color: #fff;
+	outline: none;
+	border-radius: 10px;
+	padding: 5px 15px;
+	margin-left:20px;
+	border: 3px transparent solid;
+	transition-duration: 0.3s;
+}
+
+
+
+nav .btnsearch:hover {
+	color:#fff ;
+	border: 3px white solid;
+	border-radius: 10px;
+	background-color: transparent; 
+}
+
+
+
 nav.navbar {
     background-color: rgba(255, 255, 255, 0.1);
     border: none;
     position: fixed;
     width: 100%;
 
+}
+
+nav .nav-link {
+	color: #fff;
+}
+
+nav .nav-link:hover {
+	color:#D98310;
+}
+
+nav .mySearch {
+	border-radius: 0;
+}
+
+nav .line {
+    height: 4px;
+    background-color: #fff;
+    width: 40px;
+    margin: 5px 0;
+    transition-duration: 1s;
+}
+
+nav .navbar-toggler:hover .line2 {
+	transform: translateX(4px);
+}
+
+nav .navbar-toggler:hover .line3 {
+	transform: translateX(8px);
 }
 
 
@@ -70,7 +135,6 @@ nav.navbar {
     -ms- align-items: center;
     background-color: black;
     padding: 20px;
-
 }
 
 .heroInner {
@@ -219,3 +283,13 @@ nav.navbar {
     padding: 30px;
     background-color: #f5f5f5f5;
 }
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 990px) {
+
+  nav.navbar {
+    background-color: black;
+  }
+
+}
+
