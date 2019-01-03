@@ -38,6 +38,10 @@ body {
 
 }
 
+a {
+    cursor: pointer;		
+}
+
 
 input:focus, input:hover, input:active {
 	outline: none !important;
@@ -79,17 +83,19 @@ nav .btnsearch:hover {
 nav.navbar {
     background-color: rgba(255, 255, 255, 0.1);
     border: none;
-    position: fixed;
+    position: absolute;
     width: 100%;
+    z-index:1;
 
 }
 
 nav .nav-link {
-	color: #fff;
+	color:#328CC1;
+    transition-duration:0.4s; 
 }
 
 nav .nav-link:hover {
-	color:#D98310;
+	color:#D9B310;
 }
 
 nav .mySearch {
@@ -112,7 +118,9 @@ nav .navbar-toggler:hover .line3 {
 	transform: translateX(8px);
 }
 
-
+.dropdown-item {
+    display:inline-block; 
+}
 
 /** HERO **/
 .hero {
@@ -167,7 +175,38 @@ nav .navbar-toggler:hover .line3 {
     font-size: 20px;
     margin-bottom: 50px;
 }
+/* GAMES*/
 
+.games {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.homeGame {
+    padding-top: 50px;
+    width: 30%;
+    margin: 5px;
+    min-width: 300px;
+}
+
+.gameImg {
+    height: 250px;
+    cursor: pointer;
+}
+
+.gameInfo {
+    background-color: #f5f5f5f5;
+    height: 85px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/*INFO*/
+.sideInfo {
+    padding: 30px;
+    background-color: #f5f5f5f5;
+}
 
 /*FOOTER*/
 
@@ -288,7 +327,7 @@ nav .navbar-toggler:hover .line3 {
 @media only screen and (max-width: 990px) {
 
   nav.navbar {
-    background-color: black;
+    background-color: rgba(0,0,0,0.5);
   }
 
 }
