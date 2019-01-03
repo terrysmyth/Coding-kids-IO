@@ -38,6 +38,23 @@ body {
 
 }
 
+button {
+    color:#D9B310;
+    background-color: #328CC1;
+    font-family: 'Nunito';
+    border-radius: 50px;
+    transition-duration: 1s;
+    padding: 10px 15px;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    color: #328CC1;
+    background-color: #D9B310;
+}
 
 input:focus, input:hover, input:active {
 	outline: none !important;
