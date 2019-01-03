@@ -1,12 +1,12 @@
 /*COLORS 
-	Blue:#0B3C5D;
-	Light Blue:#328CC1;
-	Gold:#D9B310;
-	Ivory Black:#1D2731;
+    Blue:#0B3C5D;
+    Light Blue:#328CC1;
+    Gold:#D9B310;
+    Ivory Black:#1D2731;
 */
 /** FONTS
-	font-family: 'Nunito', sans-serif;
-	font-family: 'Righteous', cursive;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Righteous', cursive;
 **/
 
 /*GENERAL*/
@@ -38,57 +38,94 @@ body {
 
 }
 
+a {
+    transition-duration: 0.5s;
+}
+
 button {
-    color:#D9B310;
-    background-color: #328CC1;
     font-family: 'Nunito';
     border-radius: 50px;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
     padding: 10px 15px;
+    border: 0;
+    cursor: pointer;
 }
 
 button:focus {
     outline: none;
 }
 
-button:hover {
-    color: #328CC1;
+a.button {
+    color: #fff;
+}
+
+.button {
+    border-radius: 50px;
+    transition-duration: 0.5s;
+    padding: 10px 15px;
+    color: #fff;
+    border: 0;
+}
+
+.buttonDark {
+    color: #fff;
+    background-color: #CB494D;
+    cursor: pointer;
+    border: 2px solid #CB494D;
+}
+
+.buttonDark:hover {
+    color: #CB494D;
+    background-color: #fff;
+}
+
+.buttonLight {
+    color: #fff;
+    background-color: #328CC1;
+    cursor: pointer;
+}
+
+.buttonLight:hover {
+    color: #fff;
     background-color: #D9B310;
 }
 
-input:focus, input:hover, input:active {
-	outline: none !important;
-	box-shadow: none !important;
-	border-color: transparent !important;
+input:focus,
+input:hover,
+input:active {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: transparent !important;
 }
+
 /* NAV */
 nav .navbar-toggler-item {
-	background-color: #fff;
-	color: #fff;
+    background-color: #fff;
+    color: #fff;
 }
 
 nav .navbar-toggler:focus {
-	outline: none !important;
+    outline: none !important;
 }
 
 
 nav .btnsearch {
-	background-color: #fff;
-	outline: none;
-	border-radius: 10px;
-	padding: 5px 15px;
-	margin-left:20px;
-	border: 3px transparent solid;
-	transition-duration: 0.3s;
+    background-color: #fff;
+    outline: none;
+    border-radius: 10px;
+    padding: 5px 15px;
+    margin-left: 20px;
+    border: 3px transparent solid;
+    transition-duration: 0.3s;
 }
 
 
 
 nav .btnsearch:hover {
-	color:#fff ;
-	border: 3px white solid;
-	border-radius: 10px;
-	background-color: transparent; 
+    color: #fff;
+    border: 3px white solid;
+    border-radius: 10px;
+    background-color: transparent;
 }
 
 
@@ -102,15 +139,15 @@ nav.navbar {
 }
 
 nav .nav-link {
-	color: #fff;
+    color: #fff;
 }
 
 nav .nav-link:hover {
-	color:#D98310;
+    color: #D98310;
 }
 
 nav .mySearch {
-	border-radius: 0;
+    border-radius: 0;
 }
 
 nav .line {
@@ -122,18 +159,18 @@ nav .line {
 }
 
 nav .navbar-toggler:hover .line2 {
-	transform: translateX(4px);
+    transform: translateX(4px);
 }
 
 nav .navbar-toggler:hover .line3 {
-	transform: translateX(8px);
+    transform: translateX(8px);
 }
 
 
 
 /** HERO **/
 .hero {
-    background-image:url(../images/bck1.jpg);
+    background-image: url(../images/bck1.jpg);
     background-size: cover;
     background-position: bottom center;
     min-height: 20vh;
@@ -169,11 +206,6 @@ nav .navbar-toggler:hover .line3 {
 
 .hero a {
     text-decoration: none;
-    color: black;
-}
-
-.hero a:hover {
-    padding: 15px;
 }
 
 .heroInner hr {
@@ -266,7 +298,6 @@ nav .navbar-toggler:hover .line3 {
     cursor: pointer;
     border-radius: 50px;
     background-color: white;
-    padding: 10px;
     transition-duration: 0.3s
 }
 
@@ -304,9 +335,8 @@ nav .navbar-toggler:hover .line3 {
 /* MEDIA QUERIES */
 @media only screen and (max-width: 990px) {
 
-  nav.navbar {
-    background-color: black;
-  }
+    nav.navbar {
+        background-color: black;
+    }
 
 }
-
