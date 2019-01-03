@@ -1,12 +1,12 @@
 /*COLORS 
-	Blue:#0B3C5D;
-	Light Blue:#328CC1;
-	Gold:#D9B310;
-	Ivory Black:#1D2731;
+    Blue:#0B3C5D;
+    Light Blue:#328CC1;
+    Gold:#D9B310;
+    Ivory Black:#1D2731;
 */
 /** FONTS
-	font-family: 'Nunito', sans-serif;
-	font-family: 'Righteous', cursive;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Righteous', cursive;
 **/
 
 /*GENERAL*/
@@ -39,43 +39,46 @@ body {
 }
 
 a {
-    cursor: pointer;		
+    cursor: pointer;
 }
 
 
-input:focus, input:hover, input:active {
-	outline: none !important;
-	box-shadow: none !important;
-	border-color: transparent !important;
+input:focus,
+input:hover,
+input:active {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: transparent !important;
 }
+
 /* NAV */
 nav .navbar-toggler-item {
-	background-color: #fff;
-	color: #fff;
+    background-color: #fff;
+    color: #fff;
 }
 
 nav .navbar-toggler:focus {
-	outline: none !important;
+    outline: none !important;
 }
 
 
 nav .btnsearch {
-	background-color: #fff;
-	outline: none;
-	border-radius: 10px;
-	padding: 5px 15px;
-	margin-left:20px;
-	border: 3px transparent solid;
-	transition-duration: 0.3s;
+    background-color: #fff;
+    outline: none;
+    border-radius: 10px;
+    padding: 5px 15px;
+    margin-left: 20px;
+    border: 3px transparent solid;
+    transition-duration: 0.3s;
 }
 
 
 
 nav .btnsearch:hover {
-	color:#fff ;
-	border: 3px white solid;
-	border-radius: 10px;
-	background-color: transparent; 
+    color: #fff;
+    border: 3px white solid;
+    border-radius: 10px;
+    background-color: transparent;
 }
 
 
@@ -85,21 +88,21 @@ nav.navbar {
     border: none;
     position: absolute;
     width: 100%;
-    z-index:1;
+    z-index: 1;
 
 }
 
 nav .nav-link {
-	color:#328CC1;
-    transition-duration:0.4s; 
+    color: #328CC1;
+    transition-duration: 0.4s;
 }
 
 nav .nav-link:hover {
-	color:#D9B310;
+    color: #D9B310;
 }
 
 nav .mySearch {
-	border-radius: 0;
+    border-radius: 0;
 }
 
 nav .line {
@@ -111,20 +114,20 @@ nav .line {
 }
 
 nav .navbar-toggler:hover .line2 {
-	transform: translateX(4px);
+    transform: translateX(4px);
 }
 
 nav .navbar-toggler:hover .line3 {
-	transform: translateX(8px);
+    transform: translateX(8px);
 }
 
 .dropdown-item {
-    display:inline-block; 
+    display: inline-block;
 }
 
 /** HERO **/
 .hero {
-    background-image:url(../images/bck1.jpg);
+    background-image: url(../images/bck1.jpg);
     background-size: cover;
     background-position: bottom center;
     min-height: 20vh;
@@ -158,11 +161,6 @@ nav .navbar-toggler:hover .line3 {
     color: white;
 }
 
-.hero a {
-    text-decoration: none;
-    color: black;
-}
-
 .hero a:hover {
     padding: 15px;
 }
@@ -175,6 +173,7 @@ nav .navbar-toggler:hover .line3 {
     font-size: 20px;
     margin-bottom: 50px;
 }
+
 /* GAMES*/
 
 .games {
@@ -215,11 +214,14 @@ nav .navbar-toggler:hover .line3 {
     color: #fff;
     padding: 50px 15px;
     display: flex;
-    display: flex;
-    display: flex;
+    display: -webkit-flex;
+    display: -ms-flex;
     justify-content: space-around;
     -webkit-justify-content: space-around;
-    justify-content: space-around;
+    -ms-justify-content: space-around;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
 }
 
 .footer p {
@@ -230,6 +232,10 @@ nav .navbar-toggler:hover .line3 {
 .footerInfo {
     width: 50vw;
     max-width: 600px;
+    min-width: 350px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 20px;
 }
 
 .footerInfo a {
@@ -247,7 +253,10 @@ nav .navbar-toggler:hover .line3 {
 .contactForm {
     width: 50vw;
     max-width: 450px;
+    min-width: 350px;
     padding: 0 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .contactForm label {
@@ -288,47 +297,28 @@ nav .navbar-toggler:hover .line3 {
     cursor: pointer;
     border-radius: 50px;
     background-color: white;
-    padding: 10px;
     transition-duration: 0.3s
 }
 
-/* GAMES*/
+.miniNav h2 {
+    padding: 5px;
+    margin-bottom: 20px;
 
-.games {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.homeGame {
-    padding-top: 50px;
-    width: 30%;
-    margin: 5px;
-    min-width: 300px;
-}
-
-.gameImg {
-    height: 250px;
-}
-
-.gameInfo {
-    background-color: #f5f5f5f5;
-    height: 85px;
-    padding: 10px;
-}
-
-/*INFO*/
-.sideInfo {
-    padding: 30px;
-    background-color: #f5f5f5f5;
 }
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 990px) {
 
-  nav.navbar {
-    background-color: rgba(0,0,0,0.5);
-  }
+    nav.navbar {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .footer {
+
+        justify-content: flex-start;
+        -webkit-justify-content: flex-start;
+        -ms-justify-content: flex-start;
+
+    }
 
 }
-
