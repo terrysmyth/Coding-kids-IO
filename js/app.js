@@ -25,6 +25,9 @@ app.config(function($routeProvider) {
         .when("/about", {
             templateUrl: "about.html",
         })
+        .when ("/creators", {
+            templateUrl: "creators.html",
+        })
         
         .otherwise({
             redirectTo: '/home'
