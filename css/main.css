@@ -101,6 +101,14 @@ input:active {
     border-color: transparent !important;
 }
 
+textarea:focus,
+textarea:hover,
+textarea:active {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: transparent !important;
+}
+
 /* NAV */
 nav .navbar-toggler-item {
     background-color: #fff;
@@ -109,6 +117,10 @@ nav .navbar-toggler-item {
 
 nav .navbar-toggler:focus {
     outline: none !important;
+}
+
+nav.navbar img {
+    max-height: 28px;
 }
 
 
@@ -338,6 +350,7 @@ nav .navbar-toggler:hover .line3 {
     min-height: 100px;
     border: none;
     margin: 0;
+    padding: 5px;
 }
 
 .contactForm input[type="submit"] {
