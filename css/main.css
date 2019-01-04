@@ -167,6 +167,8 @@ nav .mySearch {
     border-radius: 0;
 }
 
+
+
 nav .line {
     height: 4px;
     background-color: #fff;
@@ -439,6 +441,25 @@ nav .navbar-toggler:hover .line3 {
 
 .creatorWrap h3 {
     color: #CB494D;
+}
+
+
+/* TOP GAMES */
+
+.allTopGames {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    flex-wrap:wrap;
+    flex-wrap:-webkit-wrap;
+    flex-wrap:-ms-wrap;
+    justify-content: space-around;
+    justify-content:-webkit-space-around;
+    justify-content: -ms-space-around;
+}
+
+h2 {
+    text-align: center;
 }
 
 /* MEDIA QUERIES */
