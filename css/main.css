@@ -39,7 +39,7 @@ body {
 }
 
 a {
-    cursor: pointer;		
+    cursor: pointer;
     transition-duration: 0.5s;
 }
 
@@ -101,6 +101,14 @@ input:active {
     border-color: transparent !important;
 }
 
+textarea:focus,
+textarea:hover,
+textarea:active {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: transparent !important;
+}
+
 /* NAV */
 nav .navbar-toggler-item {
     background-color: #fff;
@@ -109,6 +117,10 @@ nav .navbar-toggler-item {
 
 nav .navbar-toggler:focus {
     outline: none !important;
+}
+
+nav.navbar img {
+    max-height: 28px;
 }
 
 
@@ -143,8 +155,8 @@ nav.navbar {
 }
 
 nav .nav-link {
-	color:#fff;
-    transition-duration:0.4s; 
+    color: #fff;
+    transition-duration: 0.4s;
 }
 
 nav .nav-link:hover {
@@ -215,6 +227,7 @@ nav .navbar-toggler:hover .line3 {
 .hero a {
     text-decoration: none;
 }
+
 .hero a:hover {
     padding: 15px;
 
@@ -227,6 +240,10 @@ nav .navbar-toggler:hover .line3 {
 .heroInner h2 {
     font-size: 20px;
     margin-bottom: 50px;
+}
+
+.aboutWrap h3 {
+    color: #CB494D;
 }
 
 /* GAMES*/
@@ -358,6 +375,7 @@ nav .navbar-toggler:hover .line3 {
     min-height: 100px;
     border: none;
     margin: 0;
+    padding: 5px;
 }
 
 .contactForm input[type="submit"] {
@@ -383,6 +401,46 @@ nav .navbar-toggler:hover .line3 {
 
 }
 
+/*About page*/
+.aboutWrap {
+    padding: 10px;
+    margin: 50px 0;
+}
+
+.aboutWrap h2 {
+    margin: 10px;
+    text-align: center;
+    font-size: 50px;
+    color: #0B3C5D;
+    ;
+}
+
+.aboutWrap p {
+    column-count: 2;
+}
+
+
+
+/*CREATORS*/
+.creatorWrap {
+    padding: 10px;
+    margin: 50px 0;
+}
+
+.creatorWrap h2 {
+    text-align: center;
+    font-size: 50px;
+    color: #0B3C5D;
+}
+
+.creatorWrap p {
+    column-count: 2;
+}
+
+.creatorWrap h3 {
+    color: #CB494D;
+}
+
 /* MEDIA QUERIES */
 @media only screen and (max-width: 990px) {
 
@@ -397,4 +455,18 @@ nav .navbar-toggler:hover .line3 {
         -ms-justify-content: flex-start;
 
     }
+}
+
+@media only screen and (max-width: 768px) {
+
+
+    .aboutPage p {
+        column-count: 1;
+    }
+
+
+    .creatorWrap p {
+        column-count: 1;
+    }
+
 }
