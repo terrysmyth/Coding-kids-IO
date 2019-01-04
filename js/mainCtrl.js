@@ -3,6 +3,16 @@
  angular.module("myApp")
      .controller('mainCtrl', function($rootScope, $scope, $location, $firebaseObject, $window, $firebaseArray) {
 
+     	// SELECT GAME
+     	$scope.selectedGame = null;
+     	$scope.selectGame = function(game) {
+
+     		console.log(game);
+     		$scope.selectedGame = game;
+
+     	}
+
+     	// GAMES
         $scope.games = [
 
         	{
