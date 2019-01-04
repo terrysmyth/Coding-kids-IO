@@ -241,6 +241,9 @@ nav .navbar-toggler:hover .line3 {
     margin-bottom: 50px;
 }
 
+.aboutWrap h3   {
+    color:#CB494D;
+}
 /* GAMES*/
 
 .games {
@@ -375,6 +378,23 @@ nav .navbar-toggler:hover .line3 {
     margin-bottom: 20px;
 
 }
+/*About page*/
+.aboutWrap {
+    padding: 10px;
+    margin:50px 0;
+}
+.aboutWrap h2 {
+    margin: 10px;
+    text-align: center;
+    font-size: 50px;
+    color:#0B3C5D;;
+}
+
+.aboutWrap p {
+    column-count:2;
+}
+
+
 
 /*CREATORS*/
 .creatorWrap {
@@ -413,6 +433,15 @@ nav .navbar-toggler:hover .line3 {
 }
 
 @media only screen and (max-width: 768px) {
+
+     
+.aboutPage p {
+    column-count:1;
+}
+
+   
+}
+
     .creatorWrap p {
     column-count:1; 
     }
@@ -420,4 +449,4 @@ nav .navbar-toggler:hover .line3 {
 }
 
 
-s
+
