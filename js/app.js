@@ -25,11 +25,13 @@ app.config(function($routeProvider) {
         .when("/about", {
             templateUrl: "about.html",
         })
-        
+        .when("/topgames", {
+            templateUrl: "topgames.html",
+        })
+        .when("/newgames", {
+            templateUrl: "newgames.html",
+        })
         .otherwise({
             redirectTo: '/home'
         });
 });
-
-
-
