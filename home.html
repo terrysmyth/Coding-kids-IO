@@ -6,7 +6,8 @@
         <!-- Games -->
         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 games">
             <!-- Singular Game -->
-            <div class="homeGame" ng-repeat="game in games" ng-click="selectGame(game)">
+            <div class="homeGame" ng-repeat="game in games" ng-click="selectGame(game)" 
+            ng-show="game.title.toLowerCase().includes(searchItem) || !searchItem || game.author.toLowerCase().includes(searchItem)">
                 <div class="gameImg" style="background-image: url({{game.img}});"></div>
                 <div class="gameInfo">
                     <h3>{{game.title}}</h3>
@@ -28,6 +29,15 @@
                     <li ng-repeat="leader in selectedGame.leaderboard">{{leader[0]}} : {{leader[1]}}</li>
                 </ol>
                 <a href="#" class="button buttonLight">PLAY GAME</a>
+            </div>
+            <div class="sideInfo" ng-show="selectedGame == null">
+                <h3>Fun Fact</h3>
+                <h4>-----</h4>
+                <p>asdfkljasdfhl k</p>
+                <p>asdfkljasdfhl k</p>
+                <p>asdfkljasdfhl k</p>
+                <p>asdfkljasdfhl k</p>
+                <h4>Select a game!</h4>
             </div>
         </div>
     </div>
