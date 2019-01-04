@@ -259,9 +259,29 @@ nav .navbar-toggler:hover .line3 {
 }
 
 /*INFO*/
+
+.sideBar {
+    background-color: #f5f5f5f5;
+
+}
+
+.redLine {
+    height: 5px;
+    background-color: #CB494D;
+    margin-bottom: 10px;
+    border-radius: 50px;
+}
+
 .sideInfo {
     padding: 30px;
-    background-color: #f5f5f5f5;
+}
+
+.sidePreview {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
 }
 
 /*FOOTER*/

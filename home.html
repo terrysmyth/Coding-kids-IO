@@ -15,19 +15,19 @@
             </div>
         </div>
         <!-- Game Info -->
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 sideBar">
             <div class="sideInfo" ng-show="selectedGame != null">
+                <div class="sidePreview" style="background-image: url({{selectedGame.img}});"></div>
+                <div class="redLine"></div>
                 <h3>{{selectedGame.title}}</h3>
                 <h4><span>By:</span>{{selectedGame.author}}</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <p>{{selectedGame.description}}</p>
+                <div class="redLine"></div>
                 <h3>Leaderboard</h3>
                 <ol>
-                    <li>Terry</li>
-                    <li>Terry</li>
-                    <li>Terry</li>
-                    <li>Terry</li>
-                    <li>Terry</li>
+                    <li ng-repeat="leader in selectedGame.leaderboard">{{leader[0]}} : {{leader[1]}}</li>
                 </ol>
+                <a href="#" class="button buttonLight">PLAY GAME</a>
             </div>
         </div>
     </div>
