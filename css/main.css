@@ -376,6 +376,26 @@ nav .navbar-toggler:hover .line3 {
 
 }
 
+/*CREATORS*/
+.creatorWrap {
+    padding:10px;
+    margin:50px 0;
+}
+
+.creatorWrap h2 {
+    text-align:center;
+    font-size:50px; 
+    color:#0B3C5D; 
+}
+
+.creatorWrap p {
+    column-count:2; 
+}
+
+.creatorWrap h3 {
+    color:#CB494D; 
+}
+
 /* MEDIA QUERIES */
 @media only screen and (max-width: 990px) {
 
@@ -391,3 +411,13 @@ nav .navbar-toggler:hover .line3 {
 
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .creatorWrap p {
+    column-count:1; 
+    }
+
+}
+
+
+s
