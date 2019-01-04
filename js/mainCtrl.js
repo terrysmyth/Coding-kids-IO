@@ -19,7 +19,7 @@
         		title: "Something",
         		author: "Jakcie Chan",
         		description: "This is a game",
-        		img: "https://tokegameart.net/wp-content/uploads/2018/02/corona-Ninja-Shadow-2-Game-2D-Character-Sprite.png",
+        		img: "https://www.gamedevmarket.net/file/e82a7459a48204d51c9a7c95059a54a7-700x400.png",
         		leaderboard: [
                     ["Terry", 5000],
                     ["Jack", 4990],
@@ -27,6 +27,7 @@
                     ["Luke", 2400]
         		]
         	},
+            // https://tokegameart.net/wp-content/uploads/2018/02/corona-Ninja-Shadow-2-Game-2D-Character-Sprite.png
         	{
         		title: "Kung Fu",
         		author: "Bruce Lee",
@@ -43,7 +44,7 @@
         		title: "Ninja",
         		author: "Shadow Warrior",
         		description: "This is a game, and you are a Ninja",
-                img:"https://tokegameart.net/wp-content/uploads/2016/06/Zombie-04-01.jpg",
+                img:"https://tokegameart.net/wp-content/uploads/2018/02/corona-Ninja-Shadow-2-Game-2D-Character-Sprite.png",
                 leaderboard:[
                     ["Terry", 5000],
                     ["Jack", 4090],
@@ -55,7 +56,7 @@
                 title: "Monster",
                 author: "Luke",
                 description: "This is a game, and you eat monsters, in the game! However there are super monsters to try eat and kill before they eat and kill you!",
-                img: "https://www.gamedevmarket.net/file/e82a7459a48204d51c9a7c95059a54a7-700x400.png",
+                img: "https://tokegameart.net/wp-content/uploads/2016/06/Zombie-04-01.jpg",
                 leaderboard: [
                     ["Terry", 5000],
                     ["Jack", 4990],
