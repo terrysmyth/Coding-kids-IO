@@ -1,13 +1,11 @@
 <!-- MAIN SECTION -->
 <div>{{game.title}}</div>
-
 <div class="container-fluid">
     <div class="row">
         <!-- Games -->
         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 games">
             <!-- Singular Game -->
-            <div class="homeGame" ng-repeat="game in games" ng-click="selectGame(game)" 
-            ng-show="game.title.toLowerCase().includes(searchItem) || !searchItem || game.author.toLowerCase().includes(searchItem)">
+            <div class="homeGame" ng-repeat="game in games" ng-click="selectGame(game)" ng-show="game.title.toLowerCase().includes(searchItem) || !searchItem || game.author.toLowerCase().includes(searchItem)">
                 <div class="gameImg" style="background-image: url({{game.img}});"></div>
                 <div class="gameInfo">
                     <h3>{{game.title}}</h3>
@@ -17,33 +15,6 @@
         </div>
         <!-- Game Info -->
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 sideBar">
-            <div class="sideInfo" ng-show="selectedGame != null">
-                <div class="sidePreview" style="background-image: url({{selectedGame.img}});"></div>
-                <div class="redLine"></div>
-                <h3>{{selectedGame.title}}</h3>
-                <h4><span>By:</span>{{selectedGame.author}}</h4>
-                <p>{{selectedGame.description}}</p>
-                <div class="redLine"></div>
-                <h3>Leaderboard</h3>
-                <ol>
-                    <li ng-repeat="leader in selectedGame.leaderboard">{{leader[0]}} : {{leader[1]}}</li>
-                </ol>
-                <a href="#" class="button buttonLight">PLAY GAME</a>
-            </div>
-            <div class="sideInfo" ng-show="selectedGame == null">
-                <h3>Fun Fact</h3>
-                <h4>-----</h4>
-                <p>asdfkljasdfhl k</p>
-                <p>asdfkljasdfhl k</p>
-                <p>asdfkljasdfhl k</p>
-                <p>asdfkljasdfhl k</p>
-                <h4>Select a game!</h4>
-            </div>
-        </div>
-    </div>
-</div>
-
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 sideBar">
             <div class="sideInfo" ng-show="selectedGame != null">
                 <div class="sidePreview" style="background-image: url({{selectedGame.img}});"></div>
                 <div class="redLine"></div>
