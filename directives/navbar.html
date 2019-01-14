@@ -19,15 +19,15 @@
           Games
         </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Top Games</a>
-                        <a class="dropdown-item" href="#">New Games</a>
+                        <a class="dropdown-item" href="#!/topgames">Top Games</a>
+                        <a class="dropdown-item" href="#!/newgames">New Games</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="/#!/creators">Creators</a>
                     </div>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2 mySearch" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control mr-sm-2 mySearch" type="search" placeholder="Search" aria-label="Search" ng-model="searchItem">
                 <button class="btn btn-outline-success1 my-2 my-sm-0 btnsearch" type="submit">Search</button>
             </form>
         </div>
@@ -38,6 +38,6 @@
             <h1>CodingKids IO</h1>
             <hr>    
             <h2>By kids for kids</h2>
-            <a href="#">Top games</a>
+            <a class="button buttonDark" href="#!/topgames">Top games</a>
         </div>
     </div>
