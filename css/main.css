@@ -41,6 +41,7 @@ body {
 a {
     cursor: pointer;
     transition-duration: 0.5s;
+    color:white;
 }
 
 
@@ -57,7 +58,7 @@ button:focus {
     outline: none;
 }
 
-a.button {
+a .button {
     color: #fff;
 }
 
@@ -65,7 +66,7 @@ a.button {
     border-radius: 50px;
     transition-duration: 0.5s;
     padding: 10px 15px;
-    color: #fff;
+    color: white;
     border: 0;
 }
 
