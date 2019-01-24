@@ -3,6 +3,9 @@
  angular.module("myApp")
      .controller('mainCtrl', function($rootScope, $scope, $location, $firebaseObject, $window, $firebaseArray) {
 
+        // Get a reference to the database service
+        var database = firebase.database();
+
          // SELECT GAME
          $scope.selectedGame = null;
          $scope.selectGame = function(game) {
@@ -10,11 +13,16 @@
 
          }
 
+         // Test get from Firebase
+         var ref = database.ref("siteInfo");
+         ref = $firebaseObject(ref);
+         ref.$bindTo($scope, "siteInfo");
+         
          // GAMES
          $scope.games = [
         	{
         		title: "Something",
-        		author: "Jakcie Chan",
+        		author: "Jackie Chan",
         		description: "This is a game",
         		img: "https://tokegameart.net/wp-content/uploads/2018/02/corona-Ninja-Shadow-2-Game-2D-Character-Sprite.png",
         		leaderboard: [
