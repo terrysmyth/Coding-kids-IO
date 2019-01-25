@@ -463,6 +463,38 @@ h2 {
     text-align: center;
 }
 
+.loginWrapper {
+    width: 100vw;
+    height: 500px;
+    background-color: #101010;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginBox {
+    background: rgb(16,16,16); /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover, rgba(16,16,16,1) 0%, rgba(124,37,62,1) 0%, rgba(124,37,62,1) 36%, rgba(16,16,16,1) 100%, rgba(125,185,232,1) 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover, rgba(16,16,16,1) 0%,rgba(124,37,62,1) 0%,rgba(124,37,62,1) 36%,rgba(16,16,16,1) 100%,rgba(125,185,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center, rgba(16,16,16,1) 0%,rgba(124,37,62,1) 0%,rgba(124,37,62,1) 36%,rgba(16,16,16,1) 100%,rgba(125,185,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#101010', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    max-width: 500px;
+    border-radius: 100px;
+    padding: 50px 20px;
+    margin-top: -30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #FFF;
+}
+
+.loginBox button {
+    background-color: rgba(0,0,0,0);
+    border: 1px solid #FFF;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
 /* MEDIA QUERIES */
 @media only screen and (max-width: 990px) {
 
