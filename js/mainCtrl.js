@@ -1,8 +1,35 @@
  "use strict";
 
  angular.module("myApp")
-     .controller('mainCtrl', function($rootScope, $scope, $location, $firebaseObject, $window, $firebaseArray) {
+     .controller('mainCtrl', function($rootScope, $scope, $location, $firebaseObject, $firebaseArray, $window) {
+        // CHECK USER
+        var user = firebase.auth().currentUser;
 
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            console.log("I'm logged in!");
+             $rootScope.user = user;
+
+            let ref = database.ref("users/" + user.uid);
+            let siteInfo = $firebaseObject(ref);
+            $scope.profile = siteInfo;
+
+          } else {
+            console.log("No user");
+          }
+        });
+        
+        // LOGOUT
+        $scope.logout = function() {
+            firebase.auth().signOut().then(function() {
+                console.log("Signed out");
+                $rootScope.user = null;
+                $state.go("home");
+            }).catch(function(error) {
+                console.log("Not signed out");
+            });
+        }
+        
          // SELECT GAME
          $scope.selectedGame = null;
          $scope.selectGame = function(game) {

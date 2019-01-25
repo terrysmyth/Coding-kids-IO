@@ -17,10 +17,14 @@ app.directive('footsie', function() {
 });
 
 
+
 app.config(function($routeProvider) {
     $routeProvider
         .when("/home", {
             templateUrl: "home.html",
+        })
+        .when("/login", {
+            templateUrl: "login.html",
         })
         .when("/about", {
             templateUrl: "about.html",
