@@ -2,6 +2,9 @@
 
  angular.module("myApp")
      .controller('mainCtrl', function($rootScope, $scope, $location, $firebaseObject, $firebaseArray, $window) {
+        // Get a reference to the database server
+        var database = firebase.database();
+
         // CHECK USER
         var user = firebase.auth().currentUser;
 
@@ -29,7 +32,7 @@
                 console.log("Not signed out");
             });
         }
-        
+
          // SELECT GAME
          $scope.selectedGame = null;
          $scope.selectGame = function(game) {
@@ -37,11 +40,16 @@
 
          }
 
+         // Test get from Firebase
+         var ref = database.ref("siteInfo");
+         ref = $firebaseObject(ref);
+         ref.$bindTo($scope, "siteInfo");
+         
          // GAMES
          $scope.games = [
         	{
         		title: "Something",
-        		author: "Jakcie Chan",
+        		author: "Jackie Chan",
         		description: "This is a game",
         		img: "https://tokegameart.net/wp-content/uploads/2018/02/corona-Ninja-Shadow-2-Game-2D-Character-Sprite.png",
         		leaderboard: [
