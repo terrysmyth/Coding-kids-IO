@@ -39,6 +39,7 @@
             <hr>    
             <h2>By kids for kids</h2>
             <a class="button buttonDark" href="#!/topgames">Top games</a>
-            <a class="button buttonLight " href="#!/login">Log in!</a>
+            <a class="button buttonLight " href="#!/login" ng-show="!user">Log in!</a>
+            <a class="button buttonLight " href="#!/login" ng-show="user">Log out</a>
         </div>
     </div>
