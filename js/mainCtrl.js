@@ -11,8 +11,8 @@
              $rootScope.user = user;
 
             let ref = database.ref("users/" + user.uid);
-            let siteInfo = $firebaseObject(ref);
-            $scope.profile = siteInfo;
+            let profile = $firebaseObject(ref);
+            $scope.profile = profile;
 
           } else {
             console.log("No user");
