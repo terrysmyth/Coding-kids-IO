@@ -162,8 +162,9 @@ nav .nav-link:hover {
 
 nav .mySearch {
     border-radius: 0;
+    min-width: 215px;
+    border: 1px rgba(0,0,0,0.5) solid;
 }
-
 
 
 nav .line {
@@ -598,6 +599,14 @@ h2 {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+/* ALERTIFY */
+
+.ajs-commands .ajs-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 

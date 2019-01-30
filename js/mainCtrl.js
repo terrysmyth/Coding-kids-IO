@@ -36,7 +36,7 @@
                  $rootScope.user = result.user;
              }).catch(function(error) {
 
-                console.log(error)
+                 console.log(error)
                  // Handle Errors here.
                  var errorCode = error.code;
                  var errorMessage = error.message;
@@ -51,13 +51,19 @@
 
          // LOGOUT
          $scope.logout = function() {
-             firebase.auth().signOut().then(function() {
-                 console.log("Signed out");
-                 $rootScope.user = null;
-                 $state.go("home");
-             }).catch(function(error) {
-                 console.log("Not signed out");
+             alertify.confirm('Log Out?', function() {
+                 firebase.auth().signOut().then(function() {
+                     console.log("Logged Out!");
+                     $rootScope.user = null;
+                     $state.go("home");
+                 }).catch(function(error) {
+                     console.log("Not Logged Out!");
+                 });
+                 alertify.success('Ok');
+             }, function() {
+                 alertify.error('Cancel');
              });
+
          }
 
          // SELECT GAME
@@ -169,17 +175,17 @@
          // CREATE ACCOUNT
          $scope.createAccount = function(newAccount, user) {
 
-            firebase.database().ref('users/' + user.uid).set({
-                username: user.displayName,
-                nickname: newAccount.nickname,
-                email: user.email,
-                description: newAccount.description,
-                theme: newAccount.theme,
-                photoURL: user.photoURL,
-                uid: user.uid,
-                role: "guest",
-                level: 1
-              });
+             firebase.database().ref('users/' + user.uid).set({
+                 username: user.displayName,
+                 nickname: newAccount.nickname,
+                 email: user.email,
+                 description: newAccount.description,
+                 theme: newAccount.theme,
+                 photoURL: user.photoURL,
+                 uid: user.uid,
+                 role: "guest",
+                 level: 1
+             });
 
          }
 

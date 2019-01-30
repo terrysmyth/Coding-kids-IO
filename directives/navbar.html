@@ -37,18 +37,17 @@
                     </div>
                 </li>
                 <li class= "nav-item">
-                    <a class="nav-link" href="#" ng-show="!user">Login</a>
+                    <a class="nav-link" href="#!/login" ng-show="!user">Login</a>
                 </li>
                 <li class ="nav-item">
-                    <a class="nav-link" href="#" ng-show="user">Logout</a>
+                    <a class="nav-link" href="#" ng-show="user" ng-click="logout()">Logout</a>
                 </li>
             </ul>
-            <a href="#">
+            <a href="#!/profile">
                 <div class="navPhoto" ng-show="user" style="background-image: url({{user.photoURL}});"></div>
             </a>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2 mySearch" type="search" placeholder="Search" aria-label="Search" ng-model="searchItem">
-                <button class="btn btn-outline-success1 my-2 my-sm-0 btnsearch" type="submit">Search</button>
+                <input class="form-control mr-sm-2 mySearch" type="search" placeholder="Search Game/Developer" aria-label="Search" ng-model="searchItem">
             </form>
         </div>
     </nav>
