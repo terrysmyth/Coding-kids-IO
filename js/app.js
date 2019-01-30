@@ -23,6 +23,9 @@ app.config(function($routeProvider) {
         .when("/home", {
             templateUrl: "home.html",
         })
+        .when("/profile", {
+            templateUrl: "profile.html",
+        })
         .when("/login", {
             templateUrl: "login.html",
         })

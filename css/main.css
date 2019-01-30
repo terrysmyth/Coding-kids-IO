@@ -41,7 +41,7 @@ body {
 a {
     cursor: pointer;
     transition-duration: 0.5s;
-    color:white;
+    color: white;
 }
 
 
@@ -95,19 +95,15 @@ a .button {
 }
 
 input:focus,
-input:hover,
 input:active {
     outline: none !important;
     box-shadow: none !important;
-    border-color: transparent !important;
 }
 
 textarea:focus,
-textarea:hover,
 textarea:active {
     outline: none !important;
     box-shadow: none !important;
-    border-color: transparent !important;
 }
 
 /* NAV */
@@ -189,6 +185,17 @@ nav .navbar-toggler:hover .line3 {
 .dropdown-item {
     display: inline-block;
 }
+
+nav .navPhoto {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 15px;
+}
+
 
 /** HERO **/
 .hero {
@@ -320,7 +327,7 @@ nav .navbar-toggler:hover .line3 {
 
 .sideInfo i:hover {
     cursor: pointer;
-    background-color:#D9B310;
+    background-color: #D9B310;
 }
 
 /*FOOTER*/
@@ -470,11 +477,11 @@ nav .navbar-toggler:hover .line3 {
     display: flex;
     display: -webkit-flex;
     display: -ms-flex;
-    flex-wrap:wrap;
-    flex-wrap:-webkit-wrap;
-    flex-wrap:-ms-wrap;
+    flex-wrap: wrap;
+    flex-wrap: -webkit-wrap;
+    flex-wrap: -ms-wrap;
     justify-content: space-around;
-    justify-content:-webkit-space-around;
+    justify-content: -webkit-space-around;
     justify-content: -ms-space-around;
 }
 
@@ -483,7 +490,6 @@ h2 {
 }
 
 .loginWrapper {
-    width: 100vw;
     height: 500px;
     background-color: #101010;
     display: flex;
@@ -492,11 +498,6 @@ h2 {
 }
 
 .loginBox {
-    background: rgb(16,16,16); /* Old browsers */
-background: -moz-radial-gradient(center, ellipse cover, rgba(16,16,16,1) 0%, rgba(124,37,62,1) 0%, rgba(124,37,62,1) 36%, rgba(16,16,16,1) 100%, rgba(125,185,232,1) 100%); /* FF3.6-15 */
-background: -webkit-radial-gradient(center, ellipse cover, rgba(16,16,16,1) 0%,rgba(124,37,62,1) 0%,rgba(124,37,62,1) 36%,rgba(16,16,16,1) 100%,rgba(125,185,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: radial-gradient(ellipse at center, rgba(16,16,16,1) 0%,rgba(124,37,62,1) 0%,rgba(124,37,62,1) 36%,rgba(16,16,16,1) 100%,rgba(125,185,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#101010', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     max-width: 500px;
     border-radius: 100px;
     padding: 50px 20px;
@@ -507,11 +508,96 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#101010', end
 }
 
 .loginBox button {
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(255, 255, 255, 0);
     border: 1px solid #FFF;
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
+}
+
+.loginBox button:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: #000;
+}
+
+.loginBox .img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    border: 5px #CB494D solid;
+}
+
+.loginBox span {
+    font-weight: 800;
+    color: #CB494D;
+}
+
+
+/* PROFILE PAGE*/
+
+.profileWrapper {
+    padding-top: 50px;
+}
+
+.createProfile {
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+}
+
+.createProfile input {
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+    border: 2px rgba(0,0,0,0.2) solid;
+    padding:10px;
+
+}
+
+.createProfile textarea {
+    max-width: 300px;
+    min-width: 300px;
+    min-height: 150px;
+    max-height: 150px;
+    margin: 0 auto 20px;
+    border: 2px rgba(0,0,0,0.2) solid;
+    padding:10px;
+}
+
+.createProfile input:focus {
+    border: 2px #CB494D solid;
+    
+}
+
+.createProfile textarea:focus {
+    border: 2px #CB494D solid;
+}
+
+.profileArea {
+    margin: 5px;
+    padding: 10px;
+    background-color: #f5f5f5;
+}
+
+.profilePageImage {
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
