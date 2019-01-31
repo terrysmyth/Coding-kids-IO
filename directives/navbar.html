@@ -54,10 +54,10 @@
     <!-- HERO--->
     <div class="hero">
         <div class="heroInner">
-            <h1>CodingKids IO</h1>
+            <h1>{{siteInfo.hero.heroTitle}}</h1>
             <hr>    
-            <h2>By kids for kids</h2>
-            <a class="button buttonDark" href="#!/topgames">Top games</a>
-            <a class="button buttonLight " href="#!/login">Log in!</a>
+            <h2>{{siteInfo.hero.heroSubtitle}}</h2>
+            <a class="button buttonDark" href= {{siteInfo.hero.heroBtn1.href}}>{{siteInfo.hero.heroBtn1.text}}</a>
+            <a class="button buttonLight " href={{siteInfo.hero.heroBtn2.href}}>{{siteInfo.hero.heroBtn2.text}}</a>
         </div>
     </div>
