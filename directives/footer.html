@@ -1,25 +1,25 @@
 <!-- FOOTER -->
 <footer class="footer">
     <div class="footerInfo">
-        <h3>About our company</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fringilla ipsum non ligula porta commodo. Quisque eu mi ligula. Nulla ultricies ex vitae felis auctor, sit amet pharetra justo malesuada.</p>
+        <h3>{{siteInfo.footer.footerAbout.footerAboutHeading}}</h3>
+        <p>{{siteInfo.footer.footerAbout.footerAboutBody}}</p>
         <div class="miniNav">
-            <h2>Navigation</h2>
-            <a href="#">Home</a>
-            <a href="#!/about">About</a>
-            <a href="#">Games</a>
+            <h2>{{siteInfo.footer.footerNav.footerNavHeading}}</h2>
+            <a href="{{siteInfo.footer.footerNav.footerNavBtn1.href}}">{{siteInfo.footer.footerNav.footerNavBtn1.text}}</a>
+            <a href="{{siteInfo.footer.footerNav.footerNavBtn2.href}}">{{siteInfo.footer.footerNav.footerNavBtn2.text}}</a>
+            <a href="{{siteInfo.footer.footerNav.footerNavBtn3.href}}">{{siteInfo.footer.footerNav.footerNavBtn3.text}}</a>
         </div>
     </div>
     <div class="contactForm">
         <form>
-            <h2>Contact Form</h2>
-            <label>Name:</label>
-            <input type="text" name="" placeholder="John Doe" required>
-            <label>Email:</label>
-            <input type="email" name="" placeholder="Example@gmail.com" required>
-            <label>Enquiry:</label>
-            <textarea placeholder="Whats up Doc?" required></textarea>
-            <input type="submit" name="" value="Send">
+            <h2>{{siteInfo.footer.footerContact.footerContHeading}}</h2>
+            <label>{{siteInfo.footer.footerContact.footerContInput1.label}}</label>
+            <input type="{{siteInfo.footer.footerContact.footerContInput1.type}}" name="" placeholder="{{siteInfo.footer.footerContact.footerContInput1.placeholder}}" required>
+            <label>{{siteInfo.footer.footerContact.footerContInput2.label}}</label>
+            <input type="{{siteInfo.footer.footerContact.footerContInput2.type}}" name="" placeholder="{{siteInfo.footer.footerContact.footerContInput2.placeholder}}" required>
+            <label>{{siteInfo.footer.footerContact.footerContTextarea1.label}}</label>
+            <textarea placeholder="{{siteInfo.footer.footerContact.footerContTextarea1.placeholder}}" required></textarea>
+            <input type="{{siteInfo.footer.footerContact.footerContInput4.type}}" name="" value="{{siteInfo.footer.footerContact.footerContInput4.text}}">
         </form>
     </div>
 </footer>
