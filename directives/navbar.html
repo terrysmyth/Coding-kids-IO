@@ -1,6 +1,6 @@
 <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#!/home"><img src="../images/codingIoLogo.png"></a>
+        <a class="navbar-brand" href="{{siteInfo.navbar.navbarAnchor1.href}}"><img src="{{siteInfo.navbar.navbarAnchor1.img}}"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <div class="line line1"></div>
             <div class="line line2"></div>
@@ -9,20 +9,20 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{siteInfo.navbar.navbarBtn1.href}}">{{siteInfo.navbar.navbarBtn1.text}}<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#!/about">About</a>
+                    <a class="nav-link" href="{{siteInfo.navbar.navbarBtn2.href}}">{{siteInfo.navbar.navbarBtn2.text}}</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Games
         </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#!/topgames">Top Games</a>
-                        <a class="dropdown-item" href="#!/newgames">New Games</a>
+                        <a class="dropdown-item" href="{{siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownitem1.href}}">{{siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownitem1.text}}</a>
+                        <a class="dropdown-item" href="{{siteInfo.navbar.navbarDropdown2.navbarDropdownItems.dropdownitem2.href}}">{{siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownitem2.text}}</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="/#!/creators">Creators</a>
+                        <a class="dropdown-item" href="{{siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownitem3.href}}">{{siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownitem3.text}}</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown" ng-show="user">
