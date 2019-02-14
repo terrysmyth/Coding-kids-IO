@@ -41,6 +41,9 @@ app.config(function($routeProvider) {
         .when ("/creators", {
             templateUrl: "creators.html",
         })
+        .when ("/uploadGame", {
+            templateUrl: "uploadGame.html",
+        })
         .otherwise({
             redirectTo: '/home'
         });

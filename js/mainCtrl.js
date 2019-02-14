@@ -3,7 +3,7 @@
  angular.module("myApp")
      .controller('mainCtrl', function($rootScope, $scope, $location, $firebaseObject, $firebaseArray, $window) {
          // Get a reference to the database server
-         var database = firebase.database();
+         const database = firebase.database();
          var provider = new firebase.auth.GoogleAuthProvider();
          // CHECK USER
          var user = firebase.auth().currentUser;
