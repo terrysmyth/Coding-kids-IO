@@ -4,11 +4,12 @@
         <div ng-show="!user">
             <h2>Login/Signup</h2>
             <p>Please sign in with your google account.</p>
-            <button ng-click="login(adminLogin)">Sign in with Google</button>
+            <button ng-click="login()">Sign in with Google</button>
         </div>
         <div ng-show="user">
             <h2>You are logged in!</h2>
-            <p>You are currently logged in as {{user.displayName}}</p>
+            <div class="img" style="background-image:url({{user.photoURL}})"></div>
+            <p>You are currently logged in as <span>{{user.displayName}}</span></p>
             <p>If this is not your account, please log out.</p>
             <button ng-click="logout()">LOGOUT</button>
         </div>
