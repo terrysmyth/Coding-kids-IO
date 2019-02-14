@@ -495,6 +495,26 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#101010', end
     border-radius: 5px;
 }
 
+/* ADMIN PAGE */
+.adminWrap {
+    background-color: #f5f5f5;
+}
+
+.innerAdmin {
+    padding:10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.adminWrapper {
+    padding:20px;
+    background-color: #ffffff;
+    margin: 5px;
+    box-shadow: 0 10px 25px 0 rgba(50,50,93,.07), 0 5px 15px 0 rgba(0,0,0,.07);
+}
+
+
 /* MEDIA QUERIES */
 @media only screen and (max-width: 990px) {
 
