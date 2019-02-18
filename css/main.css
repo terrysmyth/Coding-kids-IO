@@ -261,8 +261,15 @@ nav .navPhoto {
 
 .games {
     display: flex;
+    display: -webkit-flex;
+    display: -ms-flex;
     justify-content: space-around;
+    -webkit-justify-content: space-around;
+    -ms-justify-content: space-around;
     flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    padding-bottom: 50px;
 }
 
 .homeGame {
