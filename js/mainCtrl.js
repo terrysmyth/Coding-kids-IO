@@ -74,9 +74,10 @@
          }
 
          // Test get from Firebase
-         var ref = database.ref("siteInfo");
-         ref = $firebaseObject(ref);
-         ref.$bindTo($scope, "siteInfo");
+         var ref = database.ref("siteInfo"); // GET OBJECT
+         ref = $firebaseObject(ref); //turn in to JS OBJECT
+         ref.$bindTo($scope, "siteInfo"); //Tie object to SCOPE
+
 
          // GAMES
          $scope.games = [{
