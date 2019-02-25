@@ -554,6 +554,22 @@ h2 {
     box-shadow: 0 10px 25px 0 rgba(50,50,93,.07), 0 5px 15px 0 rgba(0,0,0,.07);
 }
 
+.adminWrapper label {
+    background-color: #ddd;
+    margin: 0;
+    padding: 5px;
+}
+
+.adminWrapper label:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+.adminWrapper input[type="text"] {
+    border: 1px rgba(0,0,0,0.2) solid;
+    border-radius: 5px;
+    padding: 2px 10px;
+}
+
 .loginBox button:hover {
     background-color: rgba(255, 255, 255, 1);
     color: #000;
