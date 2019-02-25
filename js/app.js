@@ -38,7 +38,13 @@ app.config(function($routeProvider) {
         .when ("/creators", {
             templateUrl: "creators.html",
         })
+        .when ("/gameSpace", {
+            templateUrl: "gameSpace.html",
+        })
         .otherwise({
             redirectTo: '/home'
         });
 });
+
+
+

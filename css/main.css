@@ -278,6 +278,18 @@ nav .navbar-toggler:hover .line3 {
     cursor: pointer;
 }
 
+/* GAMESPACE*/
+.gameSpaceBoxOuter {
+
+}  
+
+.gameSpaceBox {
+    margin: 10px;
+    background-color: grey;
+    min-height: 100px;
+    padding: 10px
+}
+
 /*INFO*/
 
 .sideBar {
