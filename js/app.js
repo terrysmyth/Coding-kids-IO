@@ -23,6 +23,9 @@ app.config(function($routeProvider) {
         .when("/home", {
             templateUrl: "home.html",
         })
+        .when("/profile", {
+            templateUrl: "profile.html",
+        })
         .when("/login", {
             templateUrl: "login.html",
         })
@@ -38,8 +41,13 @@ app.config(function($routeProvider) {
         .when ("/creators", {
             templateUrl: "creators.html",
         })
+ Game-space
         .when ("/gameSpace", {
             templateUrl: "gameSpace.html",
+
+        .when ("/admin", {
+            templateUrl: "admin.html",
+ master
         })
         .otherwise({
             redirectTo: '/home'

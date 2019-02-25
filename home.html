@@ -16,6 +16,9 @@
         <!-- Game Info -->
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 sideBar">
             <div class="sideInfo" ng-show="selectedGame != null">
+                <!-- CLOSE X -->
+                <i class="material-icons" ng-click="$parent.selectedGame = null">clear</i>
+
                 <div class="sidePreview" style="background-image: url({{selectedGame.img}});"></div>
                 <div class="redLine"></div>
                 <h3>{{selectedGame.title}}</h3>
