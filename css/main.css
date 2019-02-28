@@ -486,7 +486,7 @@ nav .navPhoto {
     justify-content: -ms-space-around;
 }
 
-h2 {
+.allTopGames h2 {
     text-align: center;
 }
 
@@ -519,6 +519,8 @@ h2 {
 /* ADMIN PAGE */
 .adminWrap {
     background-color: #f5f5f5;
+    text-align: center;
+
 }
 
 .innerAdmin {
@@ -532,7 +534,18 @@ h2 {
     padding:20px;
     background-color: #ffffff;
     margin: 5px;
+    width: 100%;
     box-shadow: 0 10px 25px 0 rgba(50,50,93,.07), 0 5px 15px 0 rgba(0,0,0,.07);
+}
+.adminWrapper h2 {
+    text-align: center;
+}
+.adminWelcome {
+    text-align: center;
+}
+.adminWelcome p {
+    max-width: 400px;
+    margin: 10px auto;
 }
 
 .loginBox button:hover {
@@ -555,6 +568,48 @@ h2 {
     font-weight: 800;
     color: #CB494D;
 }
+.heroAdmin {
+    text-align: left;
+    display: block;
+}
+.adminWrap h1 {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.adminSidebar {
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+.adminSidebar h2 {
+    color: #585858;
+    text-align: center;
+}
+.nav-pills .nav-link, .nav-pills .show>.nav-link {
+    color: #585858;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.nav-pills .nav-link:hover, .nav-pills .show>.nav-link:hover {
+    color: #fff !important;
+    background-color: #CB494D;
+    text-align: center;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #328CC1;
+    text-align: center;
+}
+
+.nav-pills .nav-link.active:hover, .nav-pills .show>.nav-link:hover {
+    color: #fff;
+    background-color: #D9B310;
+    text-align: center;
+}
+
+
 
 
 /* PROFILE PAGE*/
