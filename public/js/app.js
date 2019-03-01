@@ -29,6 +29,9 @@ app.config(function($routeProvider) {
         .when("/login", {
             templateUrl: "login.html",
         })
+        .when("/upload", {
+            templateUrl: "upload.html",
+        })
         .when("/about", {
             templateUrl: "about.html",
         })
