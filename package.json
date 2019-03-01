@@ -1,0 +1,23 @@
+{
+  "name": "coding-kids-io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terrysmyth/Coding-kids-IO.git"
+  },
+  "author": "CodingKids",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/terrysmyth/Coding-kids-IO/issues"
+  },
+  "homepage": "https://github.com/terrysmyth/Coding-kids-IO#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodejs": "0.0.0"
+  }
+}
