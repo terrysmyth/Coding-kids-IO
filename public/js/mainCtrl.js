@@ -154,6 +154,21 @@
              }
          ];
 
+         // upload game function
+         $scope.uploadGame = function(name, description, instructions, genre, file, profile) {
+            var newPostKey = firebase.database().ref().child('games/').push().key;
+            firebase.database().ref('games/' + newPostKey).set({
+                 gameName: name,
+                 gameDesc: description,
+                 gameInstruct: instructions,
+                 gameAuthor: profile.nickname,
+                 gameUid: profile.uid,
+                 gameGenre: genre,
+                 gameFile: file,
+                 key: newPostKey
+             });
+         }
+
 
          // CREATE ACCOUNT
          $scope.createAccount = function(newAccount, user) {
