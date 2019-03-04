@@ -7,8 +7,11 @@
          var provider = new firebase.auth.GoogleAuthProvider();
          // CHECK USER
          var user = firebase.auth().currentUser;
+         const loading = document.getElementById("loading");
 
          firebase.auth().onAuthStateChanged(function(user) {
+         loading.style.display = "block";
+
              if (user) {
                  console.log("I'm logged in!");
                  $rootScope.user = user;
@@ -16,13 +19,19 @@
                  let ref = database.ref("users/" + user.uid);
                  let profile = $firebaseObject(ref);
                  $scope.profile = profile;
+                 loading.style.display = "none";
+
 
              } else {
                  console.log("No user");
+                 loading.style.display = "none";
+
              }
          });
 
          $scope.login = function() {
+             loading.style.display = "block";
+
 
              firebase.auth().signInWithRedirect(provider);
              firebase.auth().getRedirectResult().then(function(result) {
