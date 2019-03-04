@@ -7,8 +7,11 @@
          var provider = new firebase.auth.GoogleAuthProvider();
          // CHECK USER
          var user = firebase.auth().currentUser;
+         const loading = document.getElementById("loading");
 
          firebase.auth().onAuthStateChanged(function(user) {
+            loading.style.display = "block";
+
              if (user) {
                  console.log("I'm logged in!");
                  $rootScope.user = user;
@@ -16,16 +19,22 @@
                  let ref = database.ref("users/" + user.uid);
                  let profile = $firebaseObject(ref);
                  $scope.profile = profile;
+                 setTimeout( function(){
+                    loading.style.display = "none";
 
+                 }, 1000)
              } else {
                  console.log("No user");
+                 loading.style.display = "none";
              }
          });
 
          $scope.login = function() {
+                loading.style.display = "block";
 
              firebase.auth().signInWithRedirect(provider);
              firebase.auth().getRedirectResult().then(function(result) {
+
                  if (result.credential) {
                      // This gives you a Google Access Token. You can use it to access the Google API.
                      var token = result.credential.accessToken;
@@ -34,6 +43,7 @@
                  // The signed-in user info.
                  var user = result.user;
                  $rootScope.user = result.user;
+
              }).catch(function(error) {
 
                  console.log(error)

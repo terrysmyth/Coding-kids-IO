@@ -647,6 +647,40 @@ h2 {
     right: 10px;
 }
 
+/* LOADING WINDOW*/
+#loading {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+   
+}
+
+.loadingInner {
+    position: absolute;
+    background-color: #262626;
+    border-radius: 10px;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    width: 350px;
+    margin: 100px auto;
+    padding-top: 20px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.8);
+}
+
+#loading img {
+    width: 100%;
+}
+
+#loading h3 {
+    color: #fff;
+    text-align: center;
+}
 
 
 /* MEDIA QUERIES */
