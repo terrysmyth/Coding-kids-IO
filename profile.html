@@ -1,43 +1,41 @@
 <div class="profileWrapper container" ng-if="user">
-	<h2>Profile: {{user.displayName}}</h2>
-	<div class="createProfile" ng-show="!profile.nickname">
-		<h3>Create Profile</h3>
-		<p>Look like you dont have a profile!</p>
-		<p>Fill in the below to set up your account and compete on leaderboards!</p>
-		<label>
-			Nickname:
-			<input type="text" name="" ng-model="newAccount.nickname" maxlength="25">
-		</label>
-		<label>
-			Description/Something about you!:
-		</label>
-		<textarea ng-model="newAccount.description" maxlength="140"></textarea>
-		<h4>Theme Color</h4>
-		<p>Can be changed later!</p>
-		<label>
-			Light:
-			<input type="radio" name="theme" value="light" ng-model="newAccount.theme" selected>
-		</label>
-		<label>
-			Dark:
-			<input type="radio" name="theme" value="dark" ng-model="newAccount.theme">
-		</label>
-		<button class="button buttonDark" ng-click="createAccount(newAccount, user)" ng-show="newAccount.nickname && newAccount.description && newAccount.theme">Create Account</button>
-	</div>
-	<div class="profileWrap row" ng-show="profile.nickname">
-		<div class="col-12 col-md-5 col-lg-3">
-			<div class="profileArea">
-				<div class="profilePageImage" style="background-image: url({{user.photoURL}});"></div>
-				<h3>{{user.displayName}}</h3>
-			</div>
-		</div>
-		<div class="col-12 col-md-6 col-lg-9">
-			<div class="profileArea">
-				<h3>Welcome, {{profile.nickname}}!</h3>
-				<h4>About:</h4>
-				<p>{{profile.description}}</p>
-				<h4>Level: {{profile.level}}</h4>
-			</div>
-		</div>
-	</div>
-</div>
+    <h2>Profile: {{user.displayName}}</h2>
+    <div class="createProfile" ng-show="!profile.nickname">
+        <h3>Create Profile</h3>
+        <p>Look like you dont have a profile!</p>
+        <p>Fill in the below to set up your account and compete on leaderboards!</p>
+        <label>
+            Nickname:
+            <input type="text" name="" ng-model="newAccount.nickname" maxlength="25">
+        </label>
+        <label>
+            Description/Something about you!:
+        </label>
+        <textarea ng-model="newAccount.description" maxlength="140"></textarea>
+        <label>
+            Light:
+            <input type="radio" name="theme" value="light" ng-model="newAccount.theme" selected>
+        </label>
+        <label>
+            Dark:
+            <input type="radio" name="theme" value="dark" ng-model="newAccount.theme">
+        </label>
+        <button class="button buttonDark" ng-click="createAccount(newAccount, user)" ng-show="newAccount.nickname && newAccount.description && newAccount.theme">Create Account</button>
+    </div>
+    <div class="profileWrap row" ng-show="profile.nickname">
+        <div class="col-12 col-md-5 col-lg-3">
+            <div class="profileArea">
+                <div class="profilePageImage" style="background-image: url({{user.photoURL}});"></div>
+                <h3>{{user.displayName}}</h3>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-9">
+            <div class="profileArea">
+                <h3>Welcome, {{profile.nickname}}!</h3>
+                <h4>About:</h4>
+                <p>{{profile.description}}</p>
+                <h4>Level: {{profile.level}}</h4>
+                <button ng-click="profile.nickname = '' ">Edit Profile</button>
+            </div>
+        </div>
+    </div>
