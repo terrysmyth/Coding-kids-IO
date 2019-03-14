@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" ng-if="profile.role == 'admin'">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 adminSidebar" ng-init="adminSelect = 'adminWelcome' ">
             <h2>Admin</h2>
@@ -19,191 +19,241 @@
                     <p>Use the navbar on the side to navigate throughout the admin cards, and just edit the inputs to edit the website. Once you're finished, press the "submit" button to finalise your changes.</p>
                     <p>Be sure double check your work before you submit it!</p>
                 </div>
-                <div class="innerAdmin">
+                <div class="innerAdmin" ng-init="edit = false; edit1 = false ">
                     <div class="adminWrapper heroAdmin" ng-show="adminSelect == 'hero'">
+                        <button type="button" class="btn btn-outline-dark btn-sm" ng-click="edit = !edit" ng-show="!edit">Edit</button>
+                        <button type="button" class="btn btn-outline-dark btn-sm" ng-click="edit = !edit" ng-show="edit">Save</button>
                         <h2>HERO</h2>
-                        <h3>Hero:</h3>
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 adminCols">
                                     <!-- HERO TITLE -->
-                                    <label>Hero Title: {{siteInfo.hero.heroTitle}}
-                                        <input type="text" name="" ng-model="siteInfo.hero.heroTitle">
+                                    <label ng-show="!edit">Hero Title: {{siteInfo.hero.heroTitle}}</label>
+                                    <label ng-show="edit">
+                                        Hero Title: <input type="text" name="" ng-model="siteInfo.hero.heroTitle">
                                     </label>
                                     <!-- HERO SUBTITLE -->
-                                    <label>Hero Subtitle: {{siteInfo.hero.heroSubtitle}}
-                                        <input type="text" name="" ng-model="siteInfo.hero.heroSubtitle">
+                                    <label ng-show="!edit">Hero Subtitle: {{siteInfo.hero.heroSubtitle}}</label>
+                                    <label ng-show="edit">
+                                        Hero Subtitle: <input type="text" name="" ng-model="siteInfo.hero.heroSubtitle">
                                     </label>
                                     <!-- HERO BUTTON ! -->
-                                    <label>Button 1 href: {{siteInfo.hero.heroBtn1.href}}
-                                        <input type="text" name="" ng-model="siteInfo.hero.heroBtn1.href">
+                                    <label ng-show="!edit">Button 1 href: {{siteInfo.hero.heroBtn1.href}}</label>
+                                    <label ng-show="edit">
+                                        Button 1 href: <input type="text" name="" ng-model="siteInfo.hero.heroBtn1.href">
                                     </label>
                                 </div>
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 adminCols">
                                     <!-- HERO BUTTON @ -->
-                                    <label>Button 1 text: {{siteInfo.hero.heroBtn1.text}}
-                                        <input type="text" name="" ng-model="siteInfo.hero.heroBtn1.text">
+                                    <label ng-show="!edit">Button 1 text: {{siteInfo.hero.heroBtn1.text}}</label>
+                                    <label ng-show="edit">
+                                        Button 1 text: <input type="text" name="" ng-model="siteInfo.hero.heroBtn1.text">
                                     </label>
-                                    <label>Button 2 href: {{siteInfo.hero.heroBtn2.href}}
-                                        <input type="text" name="" ng-model="siteInfo.hero.heroBtn2.href">
+                                    <label ng-show="!edit">Button 2 href: {{siteInfo.hero.heroBtn2.href}}</label>
+                                    <label ng-show="edit">
+                                        Button 2 href: <input type="text" name="" ng-model="siteInfo.hero.heroBtn2.href">
                                     </label>
-                                    <label>Button 2 text: {{siteInfo.hero.heroBtn2.text}}
-                                        <input type="text" name="" ng-model="siteInfo.hero.heroBtn2.text">
+                                    <label ng-show="!edit">Button 2 text: {{siteInfo.hero.heroBtn2.text}}</label>
+                                    <label ng-show="edit">
+                                        Button 2 text: <input type="text" name="" ng-model="siteInfo.hero.heroBtn2.text">
                                     </label>
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="adminWrapper navbarAdmin" ng-show="adminSelect == 'nav'">
+                        <button type="button" class="btn btn-outline-dark btn-sm" ng-click="edit1 = true" ng-show="!edit1">Edit</button>
+                        <button type="button" class="btn btn-outline-dark btn-sm" ng-click="edit1 = false" ng-show="edit1">Save</button>
                         <h2>NAVBAR</h2>
-                        <h3>Navbar</h3>
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 adminCols">
                                     <!-- NAVBAR ANCHOR 1 -->
-                                    <label>Navbar Anchor 1: {{siteInfo.navbar.navbarAnchor1.href}}
-                                        <input type="text" name="" ng-model="siteInfo.navbar.navbarAnchor1.href">
+                                    <label ng-show="!edit1">Navbar Anchor 1: {{siteInfo.navbar.navbarAnchor1.href}}</label>
+                                    <label ng-show="edit1">
+                                        Navbar Anchor 1: <input type="text" name="" ng-model="siteInfo.navbar.navbarAnchor1.href">
                                     </label>
                                     <!-- NAVBAR BUTTON 1 -->
-                                    <label>Navbar Button 1 text: {{siteInfo.navbar.navbarBtn1.text}}
-                                        <input type="text" name="" ng-model="siteInfo.navbar.navbarBtn1.text">
+                                    <label ng-show="!edit1">Navbar Button 1 text: {{siteInfo.navbar.navbarBtn1.text}}</label>
+                                    <label ng-show="edit1">
+                                        Navbar Button 1 text: <input type="text" name="" ng-model="siteInfo.navbar.navbarBtn1.text">
                                     </label>
-                                    <label>Navbar Button 1 href: {{siteInfo.navbar.navbarBtn1.href}}
-                                        <input type="text" name="" ng-model="siteInfo.navbar.navbarBtn1.href">
+                                    <label ng-show="!edit1">Navbar Button 1 href: {{siteInfo.navbar.navbarBtn1.href}}</label>
+                                    <label ng-show="edit1">
+                                        Navbar Button 1 href: <input type="text" name="" ng-model="siteInfo.navbar.navbarBtn1.href">
                                     </label>
                                     <!-- NAVBAR BUTTON 2 -->
-                                    <label>Navbar Button 2 text: {{siteInfo.navbar.navbarBtn2.text}}
-                                        <input type="text" name="" ng-model="siteInfo.navbar.navbarBtn2.text">
+                                    <label ng-show="!edit1">Navbar Button 2 text: {{siteInfo.navbar.navbarBtn2.text}}</label>
+                                    <label ng-show="edit1">
+                                        Navbar Button 2 text: <input type="text" name="" ng-model="siteInfo.navbar.navbarBtn2.text">
                                     </label>
-                                    <label>Navbar Button 2 href: {{siteInfo.navbar.navbarBtn2.href}}
-                                        <input type="text" name="" ng-model="siteInfo.navbar.navbarBtn2.href">
+                                    <label ng-show="!edit1">Navbar Button 2 href: {{siteInfo.navbar.navbarBtn2.href}}</label>
+                                    <label ng-show="edit1">
+                                        Navbar Button 2 href: <input type="text" name="" ng-model="siteInfo.navbar.navbarBtn2.href">
                                     </label>
                                     <!-- NAVBAR DROPDOOWN 1 -->
-                                    <label>Navbar Dropdown 1 text: {{siteInfo.navbar.navbarDropdown1.text}}
-                                        <input type="text" name="" ng-model="siteInfo.navbar.navbarDropdown1.text">
+                                    <label ng-show="!edit1">Navbar Dropdown 1 text: {{siteInfo.navbar.navbarDropdown1.text}}</label>
+                                    <label ng-show="edit1">
+                                        Navbar Dropdown 1 text: <input type="text" name="" ng-model="siteInfo.navbar.navbarDropdown1.text">
                                     </label>
-                                    <label>Navbar Dropdown 1 href: {{siteInfo.navbar.navbarDropdown1.href}}
-                                        <input type="text" name="" ng-model="siteInfo.navbar.navbarDropdown1.href">
+                                    <label ng-show="!edit1">Navbar Dropdown 1 href: {{siteInfo.navbar.navbarDropdown1.href}}</label>
+                                    <label ng-show="edit1">
+                                        Navbar Dropdown 1 href: <input type="text" name="" ng-model="siteInfo.navbar.navbarDropdown1.href">
                                     </label>
                                     <!-- NAVBAR DROPDOWN ITEMS 1 -->
-                                    <label>Navbar Dropdown items 1 text: {{siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownItem1.text}}
-                                        <input type="text" name="" ng-model="siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownItem1.text">
+                                    <label ng-show="!edit1">Navbar Dropdown items 1 text: {{siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownItem1.text}}</label>
+                                    <label ng-show="edit1">
+                                        Navbar Dropdown items 1 text: <input type=" text" name="" ng-model="siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownItem1.text">
                                     </label>
-                                    <label>Navbar Dropdown items 1 href: {{siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownItem1.href}}
-                                        <input type="text" name="" ng-model="siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownItem1.href">
+                                    <label ng-show="!edit1">Navbar Dropdown items 1 href: {{siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownItem1.href}}</label>
+                                    <label ng-show="edit1">
+                                        Navbar Dropdown items 1 href: <input type=" text" name="" ng-model="siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownItem1.href">
                                     </label>
                                 </div>
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 adminCols">
                                     <!-- NAVBAR DROPDOWN ITEMS 3 -->
-                                    <label>Navbar Dropdown items 3 text: {{siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownItem3.text}}
-                                        <input type="text" name="" ng-model="siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownItem3.text">
+                                    <label ng-show="!edit1">Navbar Dropdown items 3 text: {{siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownItem3.text}}</label>
+                                    <label ng-show="edit1">
+                                        Navbar Dropdown items 3 text: <input type="text" name="" ng-model="siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownItem3.text">
                                     </label>
-                                    <label>Navbar Dropdown items 3 href: {{siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownItem3.href}}
-                                        <input type="text" name="" ng-model="siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownItem3.href">
+                                    <label ng-show="!edit1">Navbar Dropdown items 3 href: {{siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownItem3.href}}</label>
+                                    <label ng-show="edit1">
+                                        Navbar Dropdown items 3 href: <input type="text" name="" ng-model="siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownItem3.href">
                                     </label>
                                     <!-- NAVBAR INPUT 1 -->
-                                    <label>Navbar input 1 label: {{siteInfo.navbar.navbarInput1.label}}
-                                        <input type="text" name="" ng-model="siteInfo.navbar.navbarInput1.label">
+                                    <label ng-show="!edit1">Navbar input 1 label: {{siteInfo.navbar.navbarInput1.label}}</label>
+                                    <label ng-show="edit1">
+                                        Navbar input 1 label: <input type="text" name="" ng-model="siteInfo.navbar.navbarInput1.label">
                                     </label>
-                                    <label>Navbar input 1 placeholder: {{siteInfo.navbar.navbarInput1.placeholder}}
-                                        <input type="text" name="" ng-model="siteInfo.navbar.navbarInput1.placeholder">
-                                    </label>
-                                    <label>Navbar input 1 type: {{siteInfo.navbar.navbarInput1.type}}
+                                    <label ng-show="!edit1">Navbar input 1 placeholder: {{siteInfo.navbar.navbarInput1.placeholder}}</label>
+                                    
+                                    <label ng-show="!edit1">Navbar input 1 type: {{siteInfo.navbar.navbarInput1.type}}</label>
+                                    <label ng-show="edit1">
                                         <input type="text" name="" ng-model="siteInfo.navbar.navbarInput1.type">
                                     </label>
                                     <!-- NAVBAR DROPDOWN ITEMS 2 -->
-                                    <label>Navbar Dropdown items 2 text: {{siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownItem2.text}}
-                                        <input type="text" name="" ng-model="siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownItem2.text">
+                                    <label ng-show="!edit1">Navbar Dropdown items 2 text: {{siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownItem2.text}}</label>
+                                    <label ng-show="edit1">
+                                        Navbar Dropdown items 2 text: <input type="text" name="" ng-model="siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownItem2.text">
                                     </label>
-                                    <label>Navbar Dropdown items 2 href: {{siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownItem2.href}}
-                                        <input type="text" name="" ng-model="siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownItem2.href">
+                                    <label ng-show="!edit1">Navbar Dropdown items 2 href: {{siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownItem2.href}}</label>
+                                    <label ng-show="edit1">
+                                        Navbar Dropdown items 2 href: <input type="text" name="" ng-model="siteInfo.navbar.navbarDropdown1.navbarDropdownItems.dropdownItem2.href">
                                     </label>
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="adminWrapper classFooter" ng-show="adminSelect == 'footer'">
+                        <button type="button" class="btn btn-outline-dark btn-sm" ng-click="edit2 = true" ng-show="!edit2">Edit</button>
+                        <button type="button" class="btn btn-outline-dark btn-sm" ng-click="edit2 = false" ng-show="edit2">Save</button>
                         <h2>Footer</h2>
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 adminCols">
                                     <!-- ABOUT HEADING -->
-                                    <label>Footer about heading: {{siteInfo.footer.footerAbout.footerAboutHeading}}
-                                        <input type="text" name="" ng-model="siteInfo.footer.footerAbout.footerAboutHeading">
+                                    <label ng-show="!edit2">
+                                        Footer about heading: {{siteInfo.footer.footerAbout.footerAboutHeading}}
+                                    </label>
+                                    <label ng-show="edit2">
+                                        Footer about heading: <input type="text" name="" ng-model="siteInfo.footer.footerAbout.footerAboutHeading">
                                     </label>
                                     <!-- ABOUT BODY -->
-                                    <label>Footer about body: {{siteInfo.footer.footerAbout.footerAboutBody}}
-                                        <input type="text" name="" ng-model="siteInfo.footer.footerAbout.footerAboutBody">
+                                    <label ng-show="!edit2">
+                                        Footer about body: {{siteInfo.footer.footerAbout.footerAboutBody}}
+                                    </label>
+                                    <label ng-show="edit2">
+                                        Footer about body: <input type="text" name="" ng-model="siteInfo.footer.footerContact.footerContHeading">
                                     </label>
                                     <!-- CONTACT HEADING -->
-                                    <label>Footer contact form heading: {{siteInfo.footer.footerContact.footerContHeading}}
-                                        <input type="text" name="" ng-model="siteInfo.footer.footerContact.footerContHeading">
+                                    <label ng-show="!edit2">
+                                        Footer contact form heading: {{siteInfo.footer.footerContact.footerContHeading}}
+                                    </label>
+                                    <label ng-show="edit2">
+                                        Footer contact form heading: <input type="text" name="" ng-model="siteInfo.footer.footerContact.footerContHeading">
                                     </label>
                                     <!-- CONTACT INPUT 1 -->
-                                    <label>Footer contact input 1 label: {{siteInfo.footer.footerContact.footerContInput1.label}}
-                                        <input type="text" name="" ng-model="siteInfo.footer.footerContact.footerContInput1.label">
+                                    <label ng-show="!edit2">Footer contact input 1 label: {{siteInfo.footer.footerContact.footerContInput1.label}}
                                     </label>
-                                    <label>Footer contact input 1 placeholder: {{siteInfo.footer.footerContact.footerContInput1.placeholder}}
-                                        <input type="text" name="" ng-model="siteInfo.footer.footerContact.footerContInput1.placeholder">
+                                    <label ng-show="edit2">Footer contact input 1 label: <input type="text" name="" ng-model="siteInfo.footer.footerContact.footerContInput1.label">
                                     </label>
-                                    <label>Footer contact input 1 type: {{siteInfo.footer.footerContact.footerContInput1.type}}
-                                        <input type="text" name="" ng-model="siteInfo.footer.footerContact.footerContInput1.type">
-                                    </label>
+                                    <label ng-show="!edit2">Footer contact input 1 placeholder: {{siteInfo.footer.footerContact.footerContInput1.placeholder}}</label>
+                                    <label ng-show="edit2">Footer contact input 1 placeholder: <input type="text" name="" ng-model="siteInfo.footer.footerContact.footerContInput1.placeholder"></label>
+                                    
+                                    <label ng-show="!edit2">Footer contact input 1 type: {{siteInfo.footer.footerContact.footerContInput1.type}}</label>
+                                    <label ng-show="edit2">Footer contact input 1 type: <input type="text" name="" ng-model="siteInfo.footer.footerContact.footerContInput1.type"></label>
+                                    
                                     <!--CONTACT INPUT 2  -->
-                                    <label>Footer contact input 2 label: {{siteInfo.footer.footerContact.footerContInput2.label}}
-                                        <input type="text" name="" ng-model="siteInfo.footer.footerContact.footerContInput2.label">
-                                    </label>
-                                    <label>Footer contact input 2 placeholder: {{siteInfo.footer.footerContact.footerContInput2.placeholder}}
-                                        <input type="text" name="" ng-model="siteInfo.footer.footerContact.footerContInput2.placeholder">
-                                    </label>
-                                    <label>Footer contact input 2 type: {{siteInfo.footer.footerContact.footerContInput2.type}}
-                                        <input type="text" name="" ng-model="siteInfo.footer.footerContact.footerContInput2.type">
-                                    </label>
-                                </div>
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <label ng-show="!edit2">Footer contact input 2 label: {{siteInfo.footer.footerContact.footerContInput2.label}}</label>
+                                    <label ng-show="edit2">Footer contact input 2 label: <input type="text" name="" ng-model="siteInfo.footer.footerContact.footerContInput2.label"></label>
+                                    
+                                    <label ng-show="!edit2">Footer contact input 2 placeholder: {{siteInfo.footer.footerContact.footerContInput2.placeholder}}</label>
+                                    <label ng-show="edit2">Footer contact input 2 placeholder: <input type="text" name="" ng-model="siteInfo.footer.footerContact.footerContInput2.placeholder"></label>
+                                    
+                                    <label ng-show="!edit2">Footer contact input 2 type: {{siteInfo.footer.footerContact.footerContInput2.type}}</label>
+                                    <label ng-show="edit2">Footer contact input 2 type: <input type="text" name="" ng-model="siteInfo.footer.footerContact.footerContInput2.type">
+                                </div></label>
+                                    
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 adminCols">
                                     <!-- CONTACT INPUT 3 -->
-                                    <label>Footer contact input 3 text: {{siteInfo.footer.footerContact.footerContInput4.text}}
-                                        <input type="text" name="" ng-model="siteInfo.footer.footerContact.footerContInput4.text">
-                                    </label>
-                                    <label>Footer contact input 3 type: {{siteInfo.footer.footerContact.footerContInput4.type}}
-                                        <input type="text" name="" ng-model="siteInfo.footer.footerContact.footerContInput4.type">
-                                    </label>
+                                    <label ng-show="!edit2">Footer contact input 3 text: {{siteInfo.footer.footerContact.footerContInput4.text}}</label>
+                                    <label ng-show="edit2">Footer contact input 3 text: <input type="text" name="" ng-model="siteInfo.footer.footerContact.footerContInput4.text"></label>
+                                        
+                                    
+                                    <label ng-show="!edit2">Footer contact input 3 type: {{siteInfo.footer.footerContact.footerContInput4.type}}</label>
+                                    <label ng-show="edit2">Footer contact input 3 type: <input type="text" name="" ng-model="siteInfo.footer.footerContact.footerContInput4.type"></label>
+                                        
+                                    
                                     <!-- CONTACT TEXT AREA -->
-                                    <label>Footer contact text area label: {{siteInfo.footer.footerContact.footerContTextarea1.label}}
-                                        <input type="text" name="" ng-model="siteInfo.footer.footerContact.footerContTextarea1.label">
-                                    </label>
-                                    <label>Footer contact text area placeholder: {{siteInfo.footer.footerContact.footerContTextarea1.placeholder}}
-                                        <input type="text" name="" ng-model="siteInfo.footer.footerContact.footerContTextarea1.placeholder">
-                                    </label>
+                                    <label ng-show="!edit2">Footer contact text area label: {{siteInfo.footer.footerContact.footerContTextarea1.label}}</label>
+                                    <label ng-show="edit2" ng-show="edit2">Footer contact text area label: <input type="text" name="" ng-model="siteInfo.footer.footerContact.footerContTextarea1.label"></label>
+                                        
+                                    
+                                    <label ng-show="!edit2" ng-show="!edit2">Footer contact text area placeholder: {{siteInfo.footer.footerContact.footerContTextarea1.placeholder}}</label>
+                                    <label ng-show="edit2">Footer contact text area placeholder: <input type="text" name="" ng-model="siteInfo.footer.footerContact.footerContTextarea1.placeholder"></label>
+                                        
+                                    
                                     <!-- FOOTER NAVIGATION -->
-                                    <label>Footer navigation button 1 text: {{siteInfo.footer.footerNav.footerNavBtn1.text}}
-                                        <input type="text" name="" ng-model="siteInfo.footer.footerNav.footerNavBtn1.text">
-                                    </label>
-                                    <label>Footer navigation button 1 href: {{siteInfo.footer.footerNav.footerNavBtn1.href}}
-                                        <input type="text" name="" ng-model="siteInfo.footer.footerNav.footerNavBtn1.href">
-                                    </label>
-                                    <label>Footer navigation button 2 text: {{siteInfo.footer.footerNav.footerNavBtn2.text}}
-                                        <input type="text" name="" ng-model="siteInfo.footer.footerNav.footerNavBtn2.text">
-                                    </label>
-                                    <label>Footer navigation button 2 href: {{siteInfo.footer.footerNav.footerNavBtn2.href}}
-                                        <input type="text" name="" ng-model="siteInfo.footer.footerNav.footerNavBtn2.href">
-                                    </label>
-                                    <label>Footer navigation button 3 text: {{siteInfo.footer.footerNav.footerNavBtn3.text}}
-                                        <input type="text" name="" ng-model="siteInfo.footer.footerNav.footerNavBtn3.text">
-                                    </label>
-                                    <label>Footer navigation button 3 href: {{siteInfo.footer.footerNav.footerNavBtn3.href}}
-                                        <input type="text" name="" ng-model="siteInfo.footer.footerNav.footerNavBtn3.href">
-                                    </label>
+                                    <label ng-show="!edit2">Footer navigation button 1 text: {{siteInfo.footer.footerNav.footerNavBtn1.text}}</label>
+                                    <label ng-show="edit2">Footer navigation button 1 text: <input type="text" name="" ng-model="siteInfo.footer.footerNav.footerNavBtn1.text"></label>
+                                        
+                                    
+                                    <label ng-show="!edit2">Footer navigation button 1 href: {{siteInfo.footer.footerNav.footerNavBtn1.href}}</label>
+                                    <label ng-show="edit2">Footer navigation button 1 href: <input type="text" name="" ng-model="siteInfo.footer.footerNav.footerNavBtn1.href"></label>
+                                        
+                                    
+                                    <label ng-show="!edit2">Footer navigation button 2 text: {{siteInfo.footer.footerNav.footerNavBtn2.text}}</label>
+                                    <label ng-show="edit2">Footer navigation button 2 text: <input type="text" name="" ng-model="siteInfo.footer.footerNav.footerNavBtn2.text"></label>
+                                        
+                                    
+                                    <label ng-show="!edit2">Footer navigation button 2 href: {{siteInfo.footer.footerNav.footerNavBtn2.href}}</label>
+                                    <label ng-show="edit2">Footer navigation button 2 href: <input type="text" name="" ng-model="siteInfo.footer.footerNav.footerNavBtn2.href"></label>
+                                        
+                                    
+                                    <label ng-show="!edit2">Footer navigation button 3 text: {{siteInfo.footer.footerNav.footerNavBtn3.text}}</label>
+                                    <label ng-show="edit2">Footer navigation button 3 text: <input type="text" name="" ng-model="siteInfo.footer.footerNav.footerNavBtn3.text"></label>
+                                        
+                                    
+                                    <label ng-show="!edit2">Footer navigation button 3 href: {{siteInfo.footer.footerNav.footerNavBtn3.href}}</label>
+                                    <label ng-show="edit2">Footer navigation button 3 href: <input type="text" name="" ng-model="siteInfo.footer.footerNav.footerNavBtn3.href"></label>
+                                        
+                                    
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="adminWrapper topGames" ng-show="adminSelect == 'topGames'">
-                                     <h2>Top Games</h2>
-                                   </div>
-                                   <div class="adminWrapper newGames" ng-show="adminSelect == 'newGames'">
-                                     <h2>New Games</h2>
-                                   </div>
+                        <button type="button" class="btn btn-outline-dark btn-sm" ng-click="edit3 = true" ng-show="!edit3">Edit</button>
+                        <button type="button" class="btn btn-outline-dark btn-sm" ng-click="edit3 = false" ng-show="edit3">Save</button>
+                        <h2>Top Games</h2>
+                    </div>
+                    <div class="adminWrapper newGames" ng-show="adminSelect == 'newGames'">
+                        <button type="button" class="btn btn-outline-dark btn-sm" ng-click="edit3 = true" ng-show="!edit3">Edit</button>
+                        <button type="button" class="btn btn-outline-dark btn-sm" ng-click="edit3 = false" ng-show="edit3">Save</button>
+                        <h2>New Games</h2>
+                    </div>
                 </div>
             </div>
         </div>
