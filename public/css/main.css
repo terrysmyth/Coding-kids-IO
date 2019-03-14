@@ -594,6 +594,21 @@ nav .navPhoto {
 .adminWrapper h2 {
     text-align: center;
 }
+
+.adminCols {
+    display: flex;
+    display: -ms-flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    text-align: left;
+}
+
+.adminCols label {
+    margin: 1px;
+}
+
 .adminWelcome {
     text-align: center;
 }
