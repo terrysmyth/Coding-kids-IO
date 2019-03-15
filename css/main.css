@@ -657,32 +657,105 @@ h2 {
     flex-direction: column;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
-    align-items: center;
-    -webkit-align-items: center;
-    -ms-align-items: center;
     padding: 10px;
-    min-width: 300px;
-    min-height: 150px;
+    min-width: 500px;
+    min-height: 600px;
     border-radius: 5px;
     background-color: #1D2731;
     margin: 10px 0px;
 }
 
 .uploadInfoContent {
-    width: 200px;
-    height: 75px;
-}
-
-.uploadCodeWrap {
+    min-width: 200px;
+    min-height: 75px;
+    margin-bottom: 20px;
     display: flex;
     display: -webkit-flex;
     display: -ms-flex;
-    flex-direction: space-around;
-    -webkit-flex-direction: space-around;
-    -ms-flex-direction: space-around;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     align-items: center;
     -webkit-align-items: center;
     -ms-align-items: center;
+}
+
+.uploadInfoContent input[type="file"] {
+    display: none;
+}
+
+.uploadInfoContent textarea {
+    width: 300px;
+    height: 75px;
+}
+
+.fileWrapper {
+    border: 2px white solid;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.uploadInfoContent .inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.uploadInfoContent .inputfile + label {
+    cursor: pointer;
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    border: 1px solid #FFF;
+    padding: 2px 5px;
+    background-color: rgba(0, 0, 0, 0);
+    display: inline-block;
+}
+
+.uploadInfoContent .inputfile:focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.uploadInfoContent .inputfile:focus + label,
+.uploadInfoContent .inputfile + label:hover {
+    background-color: red;
+
+}
+
+#preview {
+    height: 100px;
+    width: 200px;
+    background-position: center;
+    background-size: cover;
+}
+
+.uploadCodeWrap {
+    min-width: 200px;
+    height: 75px;
+}
+
+.uploadCodeContent {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+.uploadCodeWrap textarea {
+    width: 400px;
+    min-height: 80px;
+    font-size: 10px;
 }
 
 .instructBox .instructExample {

@@ -1,6 +1,6 @@
 angular.module("myApp", [])
 
-var app = angular.module("myApp", ["ngRoute", 'firebase']);
+var app = angular.module("myApp", ["ngRoute", "firebase"]);
 
 app.directive('navbar', function() {
     return {

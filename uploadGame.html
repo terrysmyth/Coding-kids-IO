@@ -1,65 +1,68 @@
-<div class="uploadGameWrap container-fluid">
+<div class="uploadGameWrap container-fluid" ng-controller="uploadCtrl">
     <h1>Upload Game</h1>
     <h3>Here is where you upload your game to our website.</h3>
-	<div class='row'>
-		<div class="col-12 col-md-6 col-lg-4">
-			<div class="instructBox">
-				<h5>>_ Step 1</h5>
-				<p class="instructInstructions">Check that all work is saved and bug-free.</p>
-				<div class="instructExample">
-					<div class="exampleBox">EX:</div>
-					Check the console for errors and fix any that show up.
-				</div>
-			</div>
-		</div>
-		<div class="col-12 col-md-6 col-lg-4">
-			<div class="instructBox">
-				<h5>>_ Step 2</h5>
-				<p class="instructInstructions">Merge any multiple files of the same type into each other. Please use cdns for all external libraries.</p>
-				<div class="instructExample">
-					<div class="exampleBox">EX:</div>
-					Two Javascript files should be merged into one.
-				</div>
-			</div>
-		</div>
-		<div class="col-12 col-md-6 col-lg-4">
-			<div class="instructBox">
-				<h5>>_ Step 3</h5>
-				<p class="instructInstructions">Fill in relevant information and upload a thumbnail image. Upload HTML, CSS and JS files to the respective spaces below.</p>
-				<div class="instructExample">
-					<div class="exampleBox">EX:</div>
-					Check the console for errors and fix any that show up.
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="uploadWrap">
-		<div class="uploadInfoWrap">
-				<h1>GAME INFORMATION</h1>
-			<div class=uploadInfoContent>
-				<h3>Name of Game:</h3>
-				<input type="text" name="">
-			</div>
-			<div class=uploadInfoContent>
-				<h4>Thumbnail image</h4>
-				<input type="file" name="">
-			</div>
-		</div>
-		<div class="uploadCodeWrap">
-			<label>
-				JS
-				<input type="file" name="">
-			</label>
-			<label>
-				HTML
-				<input type="file" name="">
-			</label>
-			<label>
-				CSS
-				<input type="file" name="">
-			</label>
-		</div>
-		<button>Upload</button>
-	</div>
-
+    <div class='row'>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="instructBox">
+                <h5>>_ Step 1</h5>
+                <p class="instructInstructions">Check that all work is saved and bug-free.</p>
+                <div class="instructExample">
+                    <div class="exampleBox">EX:</div>
+                    Check the console for errors and fix any that show up.
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="instructBox">
+                <h5>>_ Step 2</h5>
+                <p class="instructInstructions">Merge any multiple files of the same type into each other. Please use cdns for all external libraries.</p>
+                <div class="instructExample">
+                    <div class="exampleBox">EX:</div>
+                    Two Javascript files should be merged into one.
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="instructBox">
+                <h5>>_ Step 3</h5>
+                <p class="instructInstructions">Fill in relevant information and upload a thumbnail image. Upload HTML, CSS and JS files to the respective spaces below.</p>
+                <div class="instructExample">
+                    <div class="exampleBox">EX:</div>
+                    Check the console for errors and fix any that show up.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="uploadWrap">
+        <h1>GAME INFORMATION</h1>
+        <div class="uploadInfoWrap">
+            <div class="uploadInfoContent">
+                <h3>Name of Game:</h3>
+                <input type="text" name="" ng-model="newGame.name">
+            </div>
+            <div class="uploadInfoContent">
+                <h3>Description of Game:</h3>
+                <textarea type="text" name="" ng-model="newGame.description"></textarea>
+            </div>
+            <div class="uploadInfoContent">
+                <h4>Thumbnail image</h4>
+                <label for="fileUpload" class="fileWrapper">
+                    <input type="file" name="fileUpload" id="fileUpload" class="inputfile" ng-model="newGame.image">
+                    <span id="chooseFile">Choose a file... </span>
+                    <span id="fileName"></span>
+                </label>
+                <div id="preview"></div>
+            </div>
+            <div class="uploadCodeWrap">
+                <div class="uploadCodeContent">
+                    <h4>Paste Code here</h4>
+                    <textarea ng-model="newGame.code"></textarea>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <button ng-click="createGame(newGame)" ng-show="newGame.name && newGame.description && newGame.code" >Upload</button>
+    </div>
+</div>
 </div>
