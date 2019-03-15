@@ -97,6 +97,7 @@ angular.module("myApp")
                             var day = date.getDate();
                             newGame = {
                                 name: game.name,
+                                author: $rootScope.user.displayName,
                                 description: game.description,
                                 code: game.code,
                                 url: downloadURL,
