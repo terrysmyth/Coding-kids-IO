@@ -15,20 +15,20 @@
         <div class="col-12 col-md-6 col-lg-4">
             <div class="instructBox">
                 <h5>>_ Step 2</h5>
-                <p class="instructInstructions">Merge any multiple files of the same type into each other. Please use cdns for all external libraries.</p>
+                <p class="instructInstructions">Merge any multiple files into each other. Please use cdns for all external libraries.</p>
                 <div class="instructExample">
                     <div class="exampleBox">EX:</div>
-                    Two Javascript files should be merged into one.
+                    A HTML file and a Javascript file should be merged into one using &lt;script&gt; tags.
                 </div>
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
             <div class="instructBox">
                 <h5>>_ Step 3</h5>
-                <p class="instructInstructions">Fill in relevant information and upload a thumbnail image. Upload HTML, CSS and JS files to the respective spaces below.</p>
+                <p class="instructInstructions">Fill in relevant information and upload a thumbnail image. Paste all code into the space below.</p>
                 <div class="instructExample">
                     <div class="exampleBox">EX:</div>
-                    Check the console for errors and fix any that show up.
+                    Fill in the name, description, image and code sections of the form.
                 </div>
             </div>
         </div>
@@ -45,12 +45,13 @@
                 <textarea type="text" name="" ng-model="newGame.description"></textarea>
             </div>
             <div class="uploadInfoContent">
-                <h4>Thumbnail image</h4>
+                <h4>Thumbnail image:</h4>
                 <label for="fileUpload" class="fileWrapper">
                     <input type="file" name="fileUpload" id="fileUpload" class="inputfile" ng-model="newGame.image">
                     <span id="chooseFile">Choose a file... </span>
                     <span id="fileName"></span>
                 </label>
+                <h4>Preview:</h4>
                 <div id="preview"></div>
             </div>
             <div class="uploadCodeWrap">
@@ -60,7 +61,6 @@
                 </div>
             </div>
         </div>
-        <br>
         <br>
         <button ng-click="createGame(newGame)" ng-show="newGame.name && newGame.description && newGame.code" >Upload</button>
     </div>

@@ -5,7 +5,6 @@ angular.module("myApp")
     .controller('uploadCtrl', function($rootScope, $scope, $location, $firebaseObject) {
 
         // Input of image
-
         const imageHolder = document.getElementById("fileUpload");
         const chooseFile = document.getElementById("chooseFile");
         const theFileName = document.getElementById("fileName");
@@ -13,7 +12,6 @@ angular.module("myApp")
         imageHolder.addEventListener("change", function(e) {
             chooseFile.style.display = "none";
             theFileName.innerHTML = imageHolder.files[0].name;
-
         })
 
         // Upload Game
@@ -81,7 +79,7 @@ angular.module("myApp")
                                 console.log('Upload is running');
                                 break;
                         }
-                        console.log("Upload completed");
+                        console.log("Image Upload completed");
                     }, function(error) {
                         // Handle unsuccessful uploads
                         alertify.alert('Alert Message!: ' + error);
@@ -108,7 +106,7 @@ angular.module("myApp")
                         });
 
                     });
-
+                    console.log("Game Upload Complete");
                 } catch (error) {
                     alertify.alert('Alert Message: ' + error);
                 }
