@@ -58,6 +58,8 @@
             <hr>    
             <h2>{{siteInfo.hero.heroSubtitle}}</h2>
             <a class="button buttonDark" href= {{siteInfo.hero.heroBtn1.href}}>{{siteInfo.hero.heroBtn1.text}}</a>
-            <a class="button buttonLight " href={{siteInfo.hero.heroBtn2.href}}>{{siteInfo.hero.heroBtn2.text}}</a>
+
+            <a  ng-show="!user" class="button buttonLight " href=#!/login>Log In!</a>
+            <a ng-show="user" class="button buttonLight " ng-click="logout()">Log Out!</a>
         </div>
     </div>
