@@ -1,6 +1,7 @@
+
 angular.module("myApp", [])
 
-var app = angular.module("myApp", ["ngRoute", 'firebase']);
+var app = angular.module("myApp", ["ngRoute", "firebase"]);
 
 app.directive('navbar', function() {
     return {
@@ -29,9 +30,6 @@ app.config(function($routeProvider) {
         .when("/login", {
             templateUrl: "login.html",
         })
-        .when("/upload", {
-            templateUrl: "upload.html",
-        })
         .when("/about", {
             templateUrl: "about.html",
         })
@@ -44,16 +42,10 @@ app.config(function($routeProvider) {
         .when ("/creators", {
             templateUrl: "creators.html",
         })
-        .when ("/gameSpace", {
-            templateUrl: "gameSpace.html",
-        })
-        .when ("/admin", {
-            templateUrl: "admin.html",
+        .when ("/uploadGame", {
+            templateUrl: "uploadGame.html",
         })
         .otherwise({
             redirectTo: '/home'
         });
 });
-
-
-
