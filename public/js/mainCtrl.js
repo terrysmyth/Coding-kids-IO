@@ -1,17 +1,15 @@
+
  "use strict";
 
  angular.module("myApp")
      .controller('mainCtrl', function($rootScope, $scope, $location, $firebaseObject, $firebaseArray, $window) {
          // Get a reference to the database server
-         var database = firebase.database();
+         const database = firebase.database();
          var provider = new firebase.auth.GoogleAuthProvider();
          // CHECK USER
          var user = firebase.auth().currentUser;
-         const loading = document.getElementById("loading");
 
          firebase.auth().onAuthStateChanged(function(user) {
-         loading.style.display = "block";
-
              if (user) {
                  console.log("I'm logged in!");
                  $rootScope.user = user;
@@ -19,19 +17,13 @@
                  let ref = database.ref("users/" + user.uid);
                  let profile = $firebaseObject(ref);
                  $scope.profile = profile;
-                 loading.style.display = "none";
-
 
              } else {
                  console.log("No user");
-                 loading.style.display = "none";
-
              }
          });
 
          $scope.login = function() {
-             loading.style.display = "block";
-
 
              firebase.auth().signInWithRedirect(provider);
              firebase.auth().getRedirectResult().then(function(result) {
@@ -83,10 +75,9 @@
          }
 
          // Test get from Firebase
-         var ref = database.ref("siteInfo"); // GET OBJECT
-         ref = $firebaseObject(ref); //turn in to JS OBJECT
-         ref.$bindTo($scope, "siteInfo"); //Tie object to SCOPE
-
+         var ref = database.ref("siteInfo");
+         ref = $firebaseObject(ref);
+         ref.$bindTo($scope, "siteInfo");
 
          // GAMES
          $scope.games = [{
@@ -163,21 +154,24 @@
              }
          ];
 
-         // upload game function
-         $scope.uploadGame = function(name, description, instructions, genre, file, profile) {
-            var newPostKey = firebase.database().ref().child('games/').push().key;
-            firebase.database().ref('games/' + newPostKey).set({
-                 gameName: name,
-                 gameDesc: description,
-                 gameInstruct: instructions,
-                 gameAuthor: profile.nickname,
-                 gameUid: profile.uid,
-                 gameGenre: genre,
-                 gameFile: file,
-                 key: newPostKey
-             });
+
+         // Creator DB
+
+         $scope.creator = {
+             title: "About the creators",
+             subtitle: "The Coding Kids Coalition",
+             description: "Morbi eget diam purus. Etiam at sem et dui ultricies ullamcorper non at ipsum. Sed convallis vitae massa et finibus. Nullam sit amet volutpat purus, finibus cursus leo. In interdum tincidunt quam, non sodales lorem viverra ut. Nulla eget tortor eu enim dictum ornare. Nunc mattis, mauris consequat vehicula bibendum, urna augue vehicula est, at mollis ante lorem non augue. Phasellus ullamcorper quam sed eleifend facilisis. Morbi eget nunc sed odio faucibus efficitur eget in sem. Suspendisse interdum quam sit amet ipsum imperdiet, ut feugiat mi rutrum. Sed ut laoreet odio. Donec vel sapien nibh. Aenean in posuere dolor, nec vehicula mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec ut sollicitudin leo. Maecenas tempor velit eu odio sodales, a imperdiet lacus consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non est accumsan tortor dapibus egestas. Donec dignissim nulla vitae tempor efficitur. Vivamus non leo id lacus faucibus laoreet. Etiam malesuada nunc neque, vitae lobortis libero pharetra faucibus. Proin erat ex, posuere a nibh ac, pharetra lobortis enim. Cras porta lectus eu nisi ultrices, at luctus sem faucibus. Aenean ut tincidunt diam, vitae pretium felis. Donec vitae eleifend eros, eget condimentum massa. Quisque magna lectus, condimentum a dui tristique, hendrerit facilisis quam. Sed accumsan massa leo, ac posuere dolor interdum quis. Nam ultricies nulla ut diam suscipit dictum. Donec in ex vitae mi varius euismod. Maecenas in turpis vitae lectus finibus finibus pharetra id leo. Mauris mollis velit at fermentum scelerisque. Proin pulvinar purus lorem, eget tempor.",
+             button: "Play some games!",
+             link: "/#!/home"
          }
 
+         $scope.about = {
+             title: "About us!",
+             subtittle: "Coding Kids IO",
+             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+             button: "Play Some Games",
+             link: "/#!/home"
+         }
 
          // CREATE ACCOUNT
          $scope.createAccount = function(newAccount, user) {

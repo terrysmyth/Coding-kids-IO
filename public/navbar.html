@@ -1,0 +1,67 @@
+
+<!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#!/home"><img src="../images/codingIoLogo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!/about">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Games
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#!/topgames">Top Games</a>
+                        <a class="dropdown-item" href="#!/newgames">New Games</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/#!/creators">Creators</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown" ng-show="user">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Account
+        </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#!/profile">Profile</a>
+                        <div class="dropdown-divider" ng-show="profile.role == 'editor' || profile.role == 'admin' "></div>
+                        <a class="dropdown-item" href="#!/upload" ng-show="profile.role == 'editor' || profile.role == 'admin' ">Upload</a>
+                        <a class="dropdown-item" href="/#!/admin" ng-show="profile.role == 'admin' ">Admin</a>
+                    </div>
+                </li>
+                <li class="nav-item" ng-show="user">
+                    <a class="nav-link" href="#!/uploadGame">Upload Game</a>
+                </li>
+                <li class= "nav-item">
+                    <a class="nav-link" href="#!/login" ng-show="!user">Login</a>
+                </li>
+                <li class ="nav-item">
+                    <a class="nav-link" href="#" ng-show="user" ng-click="logout()">Logout</a>
+                </li>
+            </ul>
+            <a href="#!/profile">
+                <div class="navPhoto" ng-show="user" style="background-image: url({{user.photoURL}});"></div>
+            </a>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2 mySearch" type="search" placeholder="Search Game/Developer" aria-label="Search" ng-model="searchItem">
+            </form>
+        </div>
+    </nav>
+    <!-- HERO--->
+    <div class="hero">
+        <div class="heroInner">
+            <h1>CodingKids IO</h1>
+            <hr>    
+            <h2>By kids for kids</h2>
+            <a class="button buttonDark" href="#!/topgames">Top games</a>
+            <a class="button buttonLight " href="#!/login">Log in!</a>
+        </div>
+    </div>
