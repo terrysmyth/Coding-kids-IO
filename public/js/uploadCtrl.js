@@ -1,3 +1,4 @@
+
 "use strict";
 
 angular.module("myApp")
@@ -106,7 +107,9 @@ angular.module("myApp")
                         });
 
                     });
+                    alertify.alert("Game upload complete!");
                     console.log("Game Upload Complete");
+                    window.location.replace("/#/home");
                 } catch (error) {
                     alertify.alert('Alert Message: ' + error);
                 }
