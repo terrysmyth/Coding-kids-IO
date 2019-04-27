@@ -94,6 +94,7 @@ angular.module("myApp")
                             var year = date.getFullYear();
                             var month = months[date.getMonth()];
                             var day = date.getDate();
+                            game.code = `<iframe>${game.code}</iframe>`;
                             newGame = {
                                 name: game.name,
                                 author: $rootScope.user.displayName,

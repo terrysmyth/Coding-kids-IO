@@ -45,6 +45,9 @@ app.config(function($routeProvider) {
         .when ("/uploadGame", {
             templateUrl: "uploadGame.html",
         })
+        .when ("/gameSpace", {
+            templateUrl: "gameSpace.html",
+        })
         .otherwise({
             redirectTo: '/home'
         });
